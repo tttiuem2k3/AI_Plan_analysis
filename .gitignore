@@ -31,3 +31,6 @@ backend/models_AI_forecast/
 # Runtime logs
 *.log
 backend/logs/
+
+# Local/sample data
+Data/
