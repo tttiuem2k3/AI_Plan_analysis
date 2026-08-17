@@ -1,0 +1,3 @@
+pip install fastapi uvicorn sqlalchemy pyodbc pydantic-settings python-dotenv ortools requests 
+
+python -m pip install ortools==9.9.3963

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Cảnh báo sản xuất</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+  <!-- Reuse the same UI system as Đơn hàng / Kế hoạch -->
+  <link rel="stylesheet" href="../assets/css/don-hang.css">
+
+  <style>
+    .alerts{padding:14px;display:grid;gap:10px}
+
+    /* Card-like alert item with left accent + hover */
+    .alert{
+      border:1px solid var(--border);
+      border-radius:16px;
+      background:#fff;
+      padding:14px 14px;
+      cursor:pointer;
+      transition: transform .08s ease, box-shadow .08s ease, border-color .08s ease;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Left accent bar */
+    .alert::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:0;
+      bottom:0;
+      width:5px;
+      background: #e5e7eb;
+    }
+    .alert[data-level="danger"]::before{ background: rgba(220,38,38,.85); }
+    .alert[data-level="warning"]::before{ background: rgba(245,158,11,.9); }
+    .alert[data-level="ok"]::before{ background: rgba(22,163,74,.85); }
+
+    .alert:hover{
+      transform: translateY(-1px);
+      border-color: rgba(0,110,180,.22);
+      box-shadow: 0 14px 26px rgba(15, 23, 42, 0.08);
+    }
+
+    .alert .top{display:flex;gap:12px;align-items:flex-start;justify-content:space-between}
+
+    .alert .title{
+      font-weight:900;
+      color:#0b3a68;
+      letter-spacing: -0.2px;
+      line-height:1.2;
+      margin-left:4px;
+    }
+
+    .alert .meta{
+      color:var(--muted);
+      font-weight:700;
+      font-size:12px;
+      margin-top:6px;
+      line-height:1.35;
+      margin-left:4px;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      border-radius:999px;
+      padding:6px 10px;
+      font-weight:900;
+      font-size:12px;
+      border:1px solid var(--border);
+      background:#fff;
+      white-space:nowrap;
+    }
+    .pill.red{border-color:rgba(220,38,38,.35);background:rgba(220,38,38,.08);color:var(--danger)}
+    .pill.warn{border-color:rgba(245,158,11,.45);background:rgba(245,158,11,.10);color:#a16207}
+    .pill.ok{border-color:rgba(22,163,74,.35);background:rgba(22,163,74,.08);color:var(--ok)}
+
+    .filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:14px}
+    .filters .field{display:flex;flex-direction:column;gap:6px}
+    .filters .field label{font-size:12px;color:var(--muted);font-weight:900}
+    .filters input,.filters select{border:1px solid var(--border);border-radius:12px;padding:10px 10px;font-size:14px;outline:none;background:#fff;min-width:220px}
+
+    @media (max-width: 640px){
+      .filters input,.filters select{min-width:0;width:100%}
+      .page-head{flex-direction:column;align-items:flex-start}
+      .head-actions{width:100%}
+      .alert .top{flex-direction:column;gap:10px}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="page-head">
+      <div class="page-title">
+        <div class="h1">Cảnh báo sản xuất</div>
+      </div>
+      <div class="head-actions">
+        <button class="btn primary" id="btnRefresh">
+          <i class="bi bi-bell"></i>
+          Làm mới
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="filters">
+        <div class="field">
+          <label>Trạng thái</label>
+          <select id="status">
+            <option value="all">Tất cả</option>
+            <option value="danger">Nguy cấp</option>
+            <option value="warning">Cảnh báo</option>
+            <option value="ok">Bình thường</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Đến ngày</label>
+          <input type="date" id="toDate" />
+        </div>
+        <div style="flex:1 1 auto"></div>
+        <button class="btn ghost" id="btnClear">
+          <i class="bi bi-x-circle"></i>
+          Xóa lọc
+        </button>
+      </div>
+
+      <div class="alerts" id="alertList">
+        <!-- Demo placeholders -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+
+    function levelToPill(lv){
+      if(lv==='danger') return '<span class="pill red">Nguy cấp</span>';
+      if(lv==='warning') return '<span class="pill warn">Cảnh báo</span>';
+      return '<span class="pill ok">Bình thường</span>';
+    }
+
+    function fmtDate(d){
+      if(!d) return '';
+      return String(d).split('T')[0];
+    }
+
+    async function loadAlerts(){
+      // For now, focus on: late in-progress plans/orders
+      let data = null;
+      try {
+        const res = await fetch('/api/v1/kehoach/alerts/late');
+        data = await res.json().catch(() => ({}));
+        if(!res.ok) throw new Error(data?.detail || 'Không thể tải cảnh báo');
+      } catch (e) {
+        data = { items: [], _error: e };
+      }
+
+      let items = Array.isArray(data?.items) ? data.items : [];
+
+      // DEMO fallback: always show one sample late plan so users can click and see the detail screen.
+      // This keeps the page usable even when no real late items exist on the demo DB.
+      if (!items.length) {
+        items = [
+          {
+            level: 'warning',
+            ke_hoach_id: 39,
+            ma_ke_hoach: 'KHSX/02/2026/003',
+            due_date: '2026-02-03',
+            days_late: 1,
+            orders: [{ so_don_hang: 'DSX/02/2026/003' }]
+          }
+        ];
+      }
+
+      $("alertList").innerHTML = items.map(it => {
+        const orders = Array.isArray(it.orders) ? it.orders : [];
+        const so = orders.map(x => x.so_don_hang).filter(Boolean).slice(0, 3).join(', ');
+        const more = orders.length > 3 ? ` (+${orders.length - 3})` : '';
+        const meta = `Đang sản xuất • Trễ ~${it.days_late} ngày • Hạn giao: ${fmtDate(it.due_date)}${so ? ` • Đơn: ${so}${more}` : ''}`;
+        return `
+          <div class="alert" data-level="${it.level}" data-khid="${it.ke_hoach_id}">
+            <div class="top">
+              <div>
+                <div class="title">Trễ kế hoạch sản xuất: ${it.ma_ke_hoach || ('KH-' + it.ke_hoach_id)}</div>
+                <div class="meta">${meta}</div>
+              </div>
+              <div>${levelToPill(it.level)}</div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // click -> detail
+      document.querySelectorAll('#alertList .alert').forEach(el => {
+        el.addEventListener('click', () => {
+          const khid = el.getAttribute('data-khid');
+          if(khid){
+            window.location.href = `./canh-bao-ke-hoach-tre.html?ke_hoach_id=${encodeURIComponent(khid)}`;
+          }
+        });
+      });
+
+      applyFilter();
+    }
+
+    function applyFilter(){
+      const s = $("status").value;
+      document.querySelectorAll('#alertList .alert').forEach(el => {
+        const lv = el.getAttribute('data-level');
+        el.style.display = (s==='all' || s===lv) ? '' : 'none';
+      });
+    }
+
+    $("btnRefresh").addEventListener('click', () => loadAlerts().catch(console.error));
+    $("btnClear").addEventListener('click', () => { $("status").value='all'; applyFilter(); });
+    $("status").addEventListener('change', applyFilter);
+
+    loadAlerts().catch(err => {
+      $("alertList").innerHTML = `
+        <div class="alert" data-level="danger">
+          <div class="top">
+            <div>
+              <div class="title">Không thể tải cảnh báo</div>
+              <div class="meta">${String(err?.message || err || 'Lỗi không xác định')}</div>
+            </div>
+            <div>${levelToPill('danger')}</div>
+          </div>
+        </div>
+      `;
+      applyFilter();
+    });
+  </script>
+</body>
+</html>

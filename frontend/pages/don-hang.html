@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Đơn hàng sản xuất</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="../assets/css/don-hang.css">
+</head>
+
+<body>
+  <div class="page">
+    <div class="page-head">
+      <div class="page-title">
+        <div class="h1">Đơn hàng sản xuất</div>
+      </div>
+
+      <div class="head-actions">
+        <div class="search">
+          <i class="bi bi-search"></i>
+          <input id="txtSearch" placeholder="Tìm theo số chứng từ / khách hàng / mã hàng..." />
+        </div>
+
+        <button class="btn primary" id="btnAdd">
+          <i class="bi bi-plus-lg"></i>
+          Thêm đơn hàng
+        </button>
+
+        <button class="btn ghost" id="btnReload" title="Tải lại">
+          <i class="bi bi-arrow-clockwise"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="th-blue" style="width:60px;"></th>
+              <th class="th-blue" style="width:36px;">STT</th>
+              <th class="th-blue" style="width:160px;">Số chứng từ</th>
+              <th class="th-blue" style="width:150px;">Khách hàng</th>
+              <th class="th-blue" style="width:140px;">Ngày giao hàng</th>
+              <th class="th-blue">Mã hàng</th>
+              <th class="th-blue">Tên hàng</th>
+              <th class="th-blue" style="width:160px;">Số lượng đặt hàng</th>
+              <th class="th-blue" style="width:160px;">Tình trạng đơn hàng</th>
+              <th class="th-blue" style="width:140px;">Thao tác</th>
+            </tr>
+          </thead>
+          <tbody id="tbBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Add/Edit Order -->
+  <div class="modal-backdrop hidden" id="modalOrder">
+    <div class="modal modal-xl">
+      <div class="modal-head">
+        <div class="modal-title" id="modalOrderTitle">Thêm đơn hàng</div>
+        <button class="icon-btn" data-close="modalOrder"><i class="bi bi-x-lg"></i></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="grid">
+          <label>
+            <span>Loại đơn hàng</span>
+            <select id="fLoai">
+              <option value="">-- Chọn loại --</option>
+              <option value="Đơn hàng mới">Đơn hàng mới</option>
+              <option value="Đơn phát sinh">Đơn phát sinh</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Số chứng từ</span>
+            <input id="fSoChungTu" placeholder="Nhập số chứng từ..." />
+          </label>
+
+          <label class="col-2">
+            <span>Khách hàng</span>
+            <input id="fKhachHang" placeholder="Nhập tên khách hàng..." />
+          </label>
+
+          <label>
+            <span>Ngày giao hàng</span>
+            <input id="fNgayGiao" type="date" />
+          </label>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="section-head">
+          <div class="h2">Sản phẩm</div>
+          <div class="section-actions">
+            <button class="btn ghost" id="btnAddProductRow">
+              <i class="bi bi-plus-lg"></i>
+              Thêm dòng sản phẩm
+            </button>
+          </div>
+        </div>
+
+        <div class="table-wrap slim">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="th-blue" style="width:52px;">STT</th>
+                <th class="th-blue" style="width:220px;">Mã hàng</th>
+                <th class="th-blue">Tên hàng</th>
+                <th class="th-blue" style="width:180px;">Số lượng đặt hàng</th>
+                <th class="th-blue" style="width:170px;">Ngày giao hàng</th>
+                <th class="th-blue" style="width:120px;">Thao tác</th>
+              </tr>
+            </thead>
+            <tbody id="tbDetails"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="modal-foot">
+        <button class="btn ghost" data-close="modalOrder">Hủy</button>
+        <button class="btn primary" id="btnSaveOrder">Lưu</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Product library -->
+  <div class="modal-backdrop hidden" id="modalProductLib">
+    <div class="modal modal-xl">
+      <div class="modal-head">
+        <div class="modal-title">Chọn sản phẩm</div>
+        <button class="icon-btn" data-close="modalProductLib"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="library-head">
+          <div class="search">
+            <i class="bi bi-search"></i>
+            <input id="txtSearchProduct" placeholder="Tìm theo mã / tên sản phẩm..." />
+          </div>
+          <button class="btn ghost" id="btnReloadProduct" title="Tải lại">
+            <i class="bi bi-arrow-clockwise"></i>
+          </button>
+        </div>
+
+        <div class="table-wrap slim">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="th-blue" style="width:240px;">Mã hàng</th>
+                <th class="th-blue">Tên hàng</th>
+                <th class="th-blue" style="width:120px;">Chọn</th>
+              </tr>
+            </thead>
+            <tbody id="tbProductLib"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirm dialog -->
+  <div class="modal-backdrop hidden" id="modalConfirm">
+    <div class="confirm">
+      <div class="confirm-title" id="confirmTitle">Xác nhận</div>
+      <div class="confirm-msg" id="confirmMsg">Bạn có chắc chắn?</div>
+      <div class="confirm-actions">
+        <button class="btn ghost" id="confirmCancel">Hủy</button>
+        <button class="btn danger" id="confirmOk">Thực hiện</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-wrap" id="toastWrap"></div>
+
+  <script src="../assets/js/don-hang.js"></script>
+</body>
+</html>

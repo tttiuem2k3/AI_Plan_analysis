@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>AI phân tích kế hoạch sản xuất</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="../assets/css/ke-hoach-ai.css">
+</head>
+
+<body>
+  <div class="app app-full">
+
+    <div class="card card-section">
+      <div class="card-header">
+        <div>
+          <div class="card-section-title">1. Kết quả phân tích dự báo</div>
+          <div class="card-subtitle" id="aiSubtitle">
+            Đang tải dữ liệu kế hoạch...
+          </div>
+        </div>
+        <div style="display:flex; gap:8px; align-items:center;">
+          <button class="btn-primary" id="btnReload">Phân tích lại</button>
+        </div>
+      </div>
+
+      <div class="chart-grid">
+        <div class="chart-card">
+          <div class="chart-card-title">Dự báo số lượng sản phẩm sản xuất thực tế</div>
+          <div class="chart-wrapper"><canvas id="chart1"></canvas></div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-title">Dự báo năng suất hoạt động của nhân sự (%)</div>
+          <div class="chart-wrapper"><canvas id="chart2"></canvas></div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-title">Dự báo năng suất hoạt động của máy móc (%)</div>
+          <div class="chart-wrapper"><canvas id="chart3"></canvas></div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-title">Dự báo nguồn lực khả dụng (%)</div>
+          <div class="chart-wrapper"><canvas id="chart6"></canvas></div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-title">Dự báo số lượng phế phẩm</div>
+          <div class="chart-wrapper"><canvas id="chart4"></canvas></div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-title">Dự báo tồn kho thành phẩm</div>
+          <div class="chart-wrapper"><canvas id="chart5"></canvas></div>
+        </div>
+      </div>
+
+      <div class="hint" id="errorHint" style="display:none;"></div>
+    </div>
+
+    <div class="card card-section">
+      <div class="card-header">
+        <div>
+          <div class="card-section-title">2. Đề xuất tối ưu kế hoạch sản xuất</div>
+        </div>
+      </div>
+      <div class="ai-2col-flex" style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap;">
+        <!-- Phân tích tổng thể -->
+        <div class="ai-2col-analysis" style="flex:1 1 340px; min-width:320px; max-width:520px;">
+          <div style="font-weight:600; font-size:16px; margin-bottom:8px; color:#2a2a2a;">AI phân tích tổng thể kế hoạch</div>
+          <div class="ai-analysis-host" id="aiAnalysisHost" style="min-height:80px; background:#f8f9fa; border-radius:8px; padding:16px; font-size:15px; color:#222; margin-bottom:0;"></div>
+        </div>
+        <!-- Phương án tối ưu -->
+        <div class="ai-2col-suggest" style="flex:1 1 340px; min-width:320px; max-width:520px;">
+          <div style="font-weight:600; font-size:16px; margin-bottom:8px; color:#2a2a2a;">Phương án tối ưu AI đề xuất</div>
+          <div class="ai-suggestions-list" id="aiSuggestionsHost" style="margin:0;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <button class="btn-secondary" id="btnClose">Đóng</button>
+      <button class="btn-primary" id="btnConfirm">Xác nhận</button>
+    </div>
+
+  </div>
+
+  <!-- AI loading modal (overlay) -->
+  <div id="aiLoadingOverlay" class="ai-loading-overlay" style="display:none;" aria-hidden="true">
+    <div class="ai-loading-modal" role="dialog" aria-modal="true" aria-labelledby="aiLoadingTitle">
+      <div class="ai-loading-spinner" aria-hidden="true"></div>
+      <div class="ai-loading-title" id="aiLoadingTitle">AI đang phân tích...</div>
+      <div class="ai-loading-subtitle" id="aiLoadingSubtitle">Vui lòng chờ trong giây lát, hệ thống đang tối ưu kế hoạch và tạo phương án đề xuất.</div>
+      <div class="ai-loading-actions">
+        <button class="btn-secondary" id="btnCancelAi">Hủy</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/ke-hoach-ai.js?v=20260209_1"></script>
+</body>
+
+</html>

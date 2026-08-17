@@ -1,0 +1,238 @@
+/* Additional styles for the plan calendar grid */
+
+:root{
+  --plan-sticky-col-1-width: 160px;
+}
+
+#plan-calendar-table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+#plan-calendar-table th, #plan-calendar-table td {
+  white-space: nowrap;
+}
+
+/* Sticky header */
+#plan-calendar-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+/* Sticky first column */
+#plan-calendar-table thead th.sticky-col {
+  left: 0;
+  z-index: 6;
+}
+
+/* Ensure the first sticky column keeps a stable width (used by sticky-col-2 offset) */
+#plan-calendar-table thead th.sticky-col,
+#plan-calendar-table td.sticky-col{
+  width: var(--plan-sticky-col-1-width);
+  min-width: var(--plan-sticky-col-1-width);
+  max-width: var(--plan-sticky-col-1-width);
+}
+
+#plan-calendar-table td.sticky-col {
+  position: sticky;
+  left: 0;
+  background: #fff;
+  z-index: 4;
+}
+
+/* Ensure the top-left sticky cell keeps header background */
+#plan-calendar-table thead th.sticky-col {
+  background: var(--blue);
+}
+
+/* Sticky second column (Bán thành phẩm) */
+#plan-calendar-table thead th.sticky-col-2{
+  position: sticky;
+  left: var(--plan-sticky-col-1-width);
+  z-index: 6;
+  background: var(--blue);
+}
+
+#plan-calendar-table td.sticky-col-2{
+  position: sticky;
+  left: var(--plan-sticky-col-1-width);
+  z-index: 3;
+  background: #fff;
+}
+
+/* Ensure sticky cells stay above normal cells */
+#plan-calendar-table td.sticky-col{z-index:4;}
+
+/* ============
+   DATE COLUMNS UI
+   - dễ phân biệt nhóm cột ngày được gen động
+   ============ */
+
+/* Header của cột ngày */
+#plan-calendar-table thead th.th-date {
+  background: linear-gradient(180deg, #0b6fc7 0%, #06487f 100%);
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: .3px;
+  border-left: 1px solid rgba(255,255,255,.22);
+  box-shadow:
+    inset 0 -1px 0 rgba(255,255,255,.22),
+    inset 0 1px 0 rgba(255,255,255,.12);
+  text-align: center;
+}
+
+/* Viền phân tách rõ ràng giữa nhóm cột cố định và nhóm cột ngày */
+#plan-calendar-table thead th.th-date.first-date {
+  border-left: 6px solid rgba(255,255,255,.75);
+  /* tạo cảm giác "bắt đầu vùng ngày" */
+  box-shadow: -1px 0 0 rgba(2,6,23,.25);
+}
+
+#plan-calendar-table tbody td.td-date.first-date {
+  border-left: 6px solid #84c5ff;
+  box-shadow: -1px 0 0 rgba(2,6,23,.08);
+}
+
+/* Cell của cột ngày */
+#plan-calendar-table tbody td.td-date {
+  background: #fff7e8; /* vàng nhạt để phân biệt rõ vùng ngày */
+  border-left: 1px solid #ffe2b5;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tạo "band" cho toàn bộ vùng ngày: phủ nền nhẹ từ cột ngày đầu tiên sang phải */
+#plan-calendar-table tbody td.td-date.first-date,
+#plan-calendar-table thead th.th-date.first-date {
+  box-shadow:
+    inset 9999px 0 0 rgba(245, 158, 11, 0.10),
+    -1px 0 0 rgba(2,6,23,.18);
+}
+
+/* Zebra nhẹ theo cột để dễ quét mắt */
+#plan-calendar-table tbody td.td-date:nth-of-type(even) {
+  background: #fff1d6;
+}
+
+/* Chủ nhật: chỉ highlight CN màu đỏ (không áp cho Thứ 7) */
+#plan-calendar-table thead th.th-date.is-sunday {
+  background: linear-gradient(180deg, #ef4444 0%, #b91c1c 100%);
+  color: #fff;
+}
+
+#plan-calendar-table tbody td.td-date.is-sunday {
+  background: #ffe4e6; /* đỏ/hồng nhạt */
+  border-left-color: #fecdd3;
+}
+
+/* (deprecated) cuối tuần: giữ lại để không ảnh hưởng code cũ nếu còn class, nhưng không make it đỏ */
+#plan-calendar-table thead th.th-date.is-weekend {
+  background: linear-gradient(180deg, #0b6fc7 0%, #06487f 100%);
+}
+#plan-calendar-table tbody td.td-date.is-weekend {
+  background: #fff7e8;
+  border-left-color: #ffe2b5;
+}
+
+/* Hover: làm nổi cả cột ngày */
+#plan-calendar-table th.th-date:hover,
+#plan-calendar-table td.td-date:hover {
+  background: #ffe8bf;
+}
+
+/* Khi hover một ô ngày: outline đậm hơn */
+#plan-calendar-table td.td-date {
+  position: relative;
+}
+#plan-calendar-table td.td-date:focus-within,
+#plan-calendar-table td.td-date:hover {
+  outline: 2px solid rgba(14, 165, 233, 0.28);
+  outline-offset: -2px;
+}
+
+.cell-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.badge-res {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #EFF8FF;
+  color: #175CD3;
+  font-size: 12px;
+  border: 1px solid #B2DDFF;
+}
+
+/* Resource list (Nguồn lực) - show first item, reveal list on hover */
+.res-list {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 260px;
+}
+.res-list .res-main {
+  font-weight: 400;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.res-list .res-chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--muted);
+  cursor: pointer;
+}
+.res-list .res-pop {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 6px);
+  min-width: 240px;
+  max-width: 340px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 14px 40px rgba(2,6,23,.18);
+  padding: 8px;
+  z-index: 50;
+  display: none;
+}
+.res-list.open .res-pop {
+  display: block;
+}
+.res-list .res-item {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-weight: 400;
+  color: var(--text);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.res-list .res-item:hover {
+  background: #f2f4f7;
+}
+.res-list .res-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(0,110,180,.55);
+  flex: 0 0 auto;
+}

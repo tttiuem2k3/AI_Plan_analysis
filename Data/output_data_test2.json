@@ -1,0 +1,2483 @@
+{
+    "overall_analysis": {
+        "plan": {
+            "count": 2,
+            "plans": [
+                {
+                    "APK": "ae34d21f-3936-4288-8c31-3bae34887edb",
+                    "code": "KSX/09/2026/0006",
+                    "from": "2026-09-01",
+                    "to": "2026-09-10",
+                    "status": "Chưa sản xuất",
+                    "suggestions": [
+                        {
+                            "key": "PA1_P1",
+                            "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                            "title": "[KSX/09/2026/0006] Tăng ca để kịp hạn giao",
+                            "description": "+ Bán thành phẩm BTP1910000000SL-Ván tầng WNL (1118*200*15.5) - Bàn 1 Đã SƠN LÓT của thành phẩm 45501825985061-Test Bàn 2, thuộc đơn hàng KSX/09/2026/0006-LD-LD, cần sản xuất tăng ca để đáp ứng thời gian giao hàng, với thông tin cụ thể sau:; + Số lượng cần sản xuất: 400; + Tổng số giờ cần tăng ca: 26.67; + Số lượng nhân sự SƠN cần tăng ca: 2; + Số lượng máy cần cho tăng ca: Máy không áp dụng; + Bắt đầu tăng ca: từ ngày 2026-09-06 đến ngày 2026-09-09",
+                            "priority": "P1",
+                            "template_no": 1,
+                            "can_apply": false,
+                            "content_lines": [
+                                "+ Bán thành phẩm BTP1910000000SL-Ván tầng WNL (1118*200*15.5) - Bàn 1 Đã SƠN LÓT của thành phẩm 45501825985061-Test Bàn 2, thuộc đơn hàng KSX/09/2026/0006-LD-LD, cần sản xuất tăng ca để đáp ứng thời gian giao hàng, với thông tin cụ thể sau:",
+                                "+ Số lượng cần sản xuất: 400",
+                                "+ Tổng số giờ cần tăng ca: 26.67",
+                                "+ Số lượng nhân sự SƠN cần tăng ca: 2",
+                                "+ Số lượng máy cần cho tăng ca: Máy không áp dụng",
+                                "+ Bắt đầu tăng ca: từ ngày 2026-09-06 đến ngày 2026-09-09"
+                            ],
+                            "updates": [
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "7d740b9f-6793-4ab5-94cf-8a8e0f20858d",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1910000000SL",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ván tầng WNL (1118*200*15.5) - Bàn 1 Đã SƠN LÓT",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "454c8d2a-b470-4c73-8aed-cab687726b08",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1910000000SB",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ván tầng WNL (1118*200*15.5) - Bàn 1 Đã SƠN BÓNG",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "80437e71-8742-4ca4-90a6-e148a15f89aa",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1910000000N2",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ván tầng WNL (1118*200*15.5) - Bàn 1 Đã CHÀ NHÁM 2",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "6bdcc9bd-e292-42e2-a9a3-dbb3ce03910c",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1910000000N1",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ván tầng WNL (1118*200*15.5) - Bàn 1 Đã CHÀ NHÁM 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "344a304a-a944-48e9-966c-04330ddc2572",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1910000000C2",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ván tầng WNL (1118*200*15.5) - Bàn 1 Đã CNC",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M011",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M012",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M013",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 3,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-04T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 120
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 120
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-03",
+                                            "Quantity": 120
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-04",
+                                            "Quantity": 40
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "284be1a3-772e-474d-97af-aaed9b5536fc",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1910000000",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ván tầng WNL (1118*200*15.5) - Bàn 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 6,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "926ffb74-5595-4dc0-a79f-845be6332723",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1890000000N2",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang dưới WNL (1120*65*45) - Bàn 1 Đã CHÀ NHÁM 2",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "418bdbd9-6f3f-4067-b072-c35c0132224b",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1890000000SL",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang dưới WNL (1120*65*45) - Bàn 1 Đã SƠN LÓT",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-02T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 320
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 80
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "5b109953-eec7-4c4f-a5fc-4cf315842a8b",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1890000000N1",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang dưới WNL (1120*65*45) - Bàn 1 Đã CHÀ NHÁM 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "d2544975-cadf-4e3a-bfcb-e391c45dadd8",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1890000000KC",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang dưới WNL (1120*65*45) - Bàn 1 Đã KHOAN",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M014",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M015",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M017",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M019",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 4,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "29d2bd27-09bb-473d-a26f-afccc5e7b3df",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1890000000CC",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang dưới WNL (1120*65*45) - Bàn 1 Đã CẮT",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M002",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 1,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-02T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 239
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 161
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "f6859361-e390-4684-b56d-03fb3a8794f4",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1890000000",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang dưới WNL (1120*65*45) - Bàn 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-02T00:00:00",
+                                    "EndDate": "2026-09-02T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "940c68b8-40f6-4061-8837-83a13bef7ab6",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1870000000N2",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang trên WNL (1120*60*30) - Bàn 1 Đã CHÀ NHÁM 2",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "4955fb19-77c6-4428-bba2-7c40c30939ed",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1870000000SL",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang trên WNL (1120*60*30) - Bàn 1 Đã SƠN LÓT",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-02T00:00:00",
+                                    "EndDate": "2026-09-02T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "4aaed9c4-6248-49f4-857a-2da821b40984",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1870000000N1",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang trên WNL (1120*60*30) - Bàn 1 Đã CHÀ NHÁM 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "85dc262a-52d1-4afb-9829-c7676135fc59",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1870000000KC",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang trên WNL (1120*60*30) - Bàn 1 Đã KHOAN",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M014",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M015",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M017",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M019",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 4,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "0a0d5c31-bac6-4850-993e-bd641b4084af",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1870000000TB",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang trên WNL (1120*60*30) - Bàn 1 Đã TUBI",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M023",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M024",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 2,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-02T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 307
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 93
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "08ce5b0a-e74f-4ec0-9b23-6bfb1140fc1f",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1870000000CC",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang trên WNL (1120*60*30) - Bàn 1 Đã CẮT",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M002",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 1,
+                                    "StartDate": "2026-09-02T00:00:00",
+                                    "EndDate": "2026-09-04T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 78
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-03",
+                                            "Quantity": 239
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-04",
+                                            "Quantity": 83
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "91ac05f7-a540-47a6-bdc9-3b24a94bb4f7",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1870000000",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang trên WNL (1120*60*30) - Bàn 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-02T00:00:00",
+                                    "EndDate": "2026-09-02T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "075df7b1-ec3c-46dd-8cbf-c8435f846399",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1850000000SB",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn 1 Đã SƠN BÓNG",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-02T00:00:00",
+                                    "EndDate": "2026-09-03T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 127
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-03",
+                                            "Quantity": 273
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "ddde26ca-bd81-4f55-9629-53771a1d653a",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1850000000N2",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn 1 Đã CHÀ NHÁM 2",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "02d38804-47f4-4e7d-8c1f-ff101dcefd5f",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1850000000SL",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn 1 Đã SƠN LÓT",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-03T00:00:00",
+                                    "EndDate": "2026-09-04T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-03",
+                                            "Quantity": 14
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-04",
+                                            "Quantity": 386
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "b3acadbb-7b3c-4b56-8443-6dfd0ef3b6b2",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1850000000N1",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn 1 Đã CHÀ NHÁM 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-02T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 65
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 335
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "eb615888-d766-45d6-8988-adf3d6c50a1b",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1850000000KC",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn 1 Đã KHOAN",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M014",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M015",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M017",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M019",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 4,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-04T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 19
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 153
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-03",
+                                            "Quantity": 153
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-04",
+                                            "Quantity": 75
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "61f88564-1415-4396-8b51-aa4b4523a4bc",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1850000000C3",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn 1 Đã CNC",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M011",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M012",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M013",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 3,
+                                    "StartDate": "2026-09-04T00:00:00",
+                                    "EndDate": "2026-09-04T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-04",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "c2a29513-a990-4d84-92b5-b031312305e6",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1850000000CC",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn 1 Đã CẮT",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M002",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 1,
+                                    "StartDate": "2026-09-04T00:00:00",
+                                    "EndDate": "2026-09-10T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-04",
+                                            "Quantity": 52
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-05",
+                                            "Quantity": 80
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-07",
+                                            "Quantity": 80
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-08",
+                                            "Quantity": 80
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-09",
+                                            "Quantity": 80
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-10",
+                                            "Quantity": 28
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "32e28f0f-091c-4eea-9523-557b39ee403a",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1850000000",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 6,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-02T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 220
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 180
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "eec32c92-5bfd-4752-acbd-3e0c15026b11",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1830000000PU",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Mặt bàn WNL (1500*650*20) - Bàn 1 Đã PU",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-04T00:00:00",
+                                    "EndDate": "2026-09-05T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-04",
+                                            "Quantity": 174
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-05",
+                                            "Quantity": 226
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "4b8e70a5-39e8-4f37-9b36-cbff219ed7e2",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1830000000N2",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Mặt bàn WNL (1500*650*20) - Bàn 1 Đã CHÀ NHÁM 2",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-02T00:00:00",
+                                    "EndDate": "2026-09-02T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "329ec5e0-e232-4338-82e0-c5dc73a6391d",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1830000000SL",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Mặt bàn WNL (1500*650*20) - Bàn 1 Đã SƠN LÓT",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-05T00:00:00",
+                                    "EndDate": "2026-09-07T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-05",
+                                            "Quantity": 286
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-07",
+                                            "Quantity": 114
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "57d59c86-2487-4f0c-b62c-dd614709d8ef",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1830000000N1",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Mặt bàn WNL (1500*650*20) - Bàn 1 Đã CHÀ NHÁM 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-02T00:00:00",
+                                    "EndDate": "2026-09-03T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 281
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-03",
+                                            "Quantity": 119
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "f475a035-61b3-4210-b16a-3a39ab22e633",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1830000000C2",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Mặt bàn WNL (1500*650*20) - Bàn 1 Đã CNC",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M011",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M012",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M013",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 3,
+                                    "StartDate": "2026-09-04T00:00:00",
+                                    "EndDate": "2026-09-07T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-04",
+                                            "Quantity": 16
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-05",
+                                            "Quantity": 264
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-07",
+                                            "Quantity": 120
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "7ae9b1ba-bcdb-46bf-ac73-8f4bdeedd497",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1830000000",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Mặt bàn WNL (1500*650*20) - Bàn 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 6,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-02T00:00:00",
+                                    "EndDate": "2026-09-03T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 360
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-03",
+                                            "Quantity": 40
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "381dda9f-4ec5-406c-b2f0-52a5d5655e56",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "45501825985061",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Test Bàn 2",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 5,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-03T00:00:00",
+                                    "EndDate": "2026-09-03T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-03",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "PA2_P1",
+                            "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                            "title": "[KSX/09/2026/0006] Điều phối nguồn lực thay thế",
+                            "description": "+ Bán thành phẩm BTP1910000000SB-Ván tầng WNL (1118*200*15.5) - Bàn 1 Đã SƠN BÓNG của thành phẩm 45501825985061-Test Bàn 2, thuộc đơn hàng KSX/09/2026/0006-LD-LD, cần điều chuyển nguồn lực nhân công để sản xuất kịp tiến độ giao hàng.; + Việc điều chuyển này sẽ giúp giảm tải cho nguồn lực nhân công đang bị nghẽn.; + Tác động dự kiến: giảm 1 công đoạn trễ, giảm 60 phút chậm tiến độ, tăng 10 phút thời gian chuẩn bị.",
+                            "priority": "P1",
+                            "template_no": 2,
+                            "can_apply": false,
+                            "content_lines": [
+                                "+ Bán thành phẩm BTP1910000000SB-Ván tầng WNL (1118*200*15.5) - Bàn 1 Đã SƠN BÓNG của thành phẩm 45501825985061-Test Bàn 2, thuộc đơn hàng KSX/09/2026/0006-LD-LD, cần điều chuyển nguồn lực nhân công để sản xuất kịp tiến độ giao hàng.",
+                                "+ Việc điều chuyển này sẽ giúp giảm tải cho nguồn lực nhân công đang bị nghẽn.",
+                                "+ Tác động dự kiến: giảm 1 công đoạn trễ, giảm 60 phút chậm tiến độ, tăng 10 phút thời gian chuẩn bị."
+                            ],
+                            "updates": [
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "7d740b9f-6793-4ab5-94cf-8a8e0f20858d",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1910000000SL",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ván tầng WNL (1118*200*15.5) - Bàn 1 Đã SƠN LÓT",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "454c8d2a-b470-4c73-8aed-cab687726b08",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1910000000SB",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ván tầng WNL (1118*200*15.5) - Bàn 1 Đã SƠN BÓNG",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "80437e71-8742-4ca4-90a6-e148a15f89aa",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1910000000N2",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ván tầng WNL (1118*200*15.5) - Bàn 1 Đã CHÀ NHÁM 2",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "6bdcc9bd-e292-42e2-a9a3-dbb3ce03910c",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1910000000N1",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ván tầng WNL (1118*200*15.5) - Bàn 1 Đã CHÀ NHÁM 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "344a304a-a944-48e9-966c-04330ddc2572",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1910000000C2",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ván tầng WNL (1118*200*15.5) - Bàn 1 Đã CNC",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M011",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M012",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M013",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 3,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-04T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 120
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 120
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-03",
+                                            "Quantity": 120
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-04",
+                                            "Quantity": 40
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "284be1a3-772e-474d-97af-aaed9b5536fc",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1910000000",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ván tầng WNL (1118*200*15.5) - Bàn 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 6,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "926ffb74-5595-4dc0-a79f-845be6332723",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1890000000N2",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang dưới WNL (1120*65*45) - Bàn 1 Đã CHÀ NHÁM 2",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "418bdbd9-6f3f-4067-b072-c35c0132224b",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1890000000SL",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang dưới WNL (1120*65*45) - Bàn 1 Đã SƠN LÓT",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-02T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 320
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 80
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "5b109953-eec7-4c4f-a5fc-4cf315842a8b",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1890000000N1",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang dưới WNL (1120*65*45) - Bàn 1 Đã CHÀ NHÁM 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "d2544975-cadf-4e3a-bfcb-e391c45dadd8",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1890000000KC",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang dưới WNL (1120*65*45) - Bàn 1 Đã KHOAN",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M014",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M015",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M017",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M019",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 4,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "29d2bd27-09bb-473d-a26f-afccc5e7b3df",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1890000000CC",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang dưới WNL (1120*65*45) - Bàn 1 Đã CẮT",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M002",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 1,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-02T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 239
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 161
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "f6859361-e390-4684-b56d-03fb3a8794f4",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1890000000",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang dưới WNL (1120*65*45) - Bàn 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-02T00:00:00",
+                                    "EndDate": "2026-09-02T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "940c68b8-40f6-4061-8837-83a13bef7ab6",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1870000000N2",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang trên WNL (1120*60*30) - Bàn 1 Đã CHÀ NHÁM 2",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "4955fb19-77c6-4428-bba2-7c40c30939ed",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1870000000SL",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang trên WNL (1120*60*30) - Bàn 1 Đã SƠN LÓT",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-02T00:00:00",
+                                    "EndDate": "2026-09-02T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "4aaed9c4-6248-49f4-857a-2da821b40984",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1870000000N1",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang trên WNL (1120*60*30) - Bàn 1 Đã CHÀ NHÁM 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "85dc262a-52d1-4afb-9829-c7676135fc59",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1870000000KC",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang trên WNL (1120*60*30) - Bàn 1 Đã KHOAN",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M014",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M015",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M017",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M019",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 4,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "0a0d5c31-bac6-4850-993e-bd641b4084af",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1870000000TB",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang trên WNL (1120*60*30) - Bàn 1 Đã TUBI",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M023",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M024",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 2,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-02T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 307
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 93
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "08ce5b0a-e74f-4ec0-9b23-6bfb1140fc1f",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1870000000CC",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang trên WNL (1120*60*30) - Bàn 1 Đã CẮT",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M002",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 1,
+                                    "StartDate": "2026-09-02T00:00:00",
+                                    "EndDate": "2026-09-04T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 78
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-03",
+                                            "Quantity": 239
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-04",
+                                            "Quantity": 83
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "91ac05f7-a540-47a6-bdc9-3b24a94bb4f7",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1870000000",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Ngang trên WNL (1120*60*30) - Bàn 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-02T00:00:00",
+                                    "EndDate": "2026-09-02T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "075df7b1-ec3c-46dd-8cbf-c8435f846399",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1850000000SB",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn 1 Đã SƠN BÓNG",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-02T00:00:00",
+                                    "EndDate": "2026-09-03T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 127
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-03",
+                                            "Quantity": 273
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "ddde26ca-bd81-4f55-9629-53771a1d653a",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1850000000N2",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn 1 Đã CHÀ NHÁM 2",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-01T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "02d38804-47f4-4e7d-8c1f-ff101dcefd5f",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1850000000SL",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn 1 Đã SƠN LÓT",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-03T00:00:00",
+                                    "EndDate": "2026-09-04T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-03",
+                                            "Quantity": 14
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-04",
+                                            "Quantity": 386
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "b3acadbb-7b3c-4b56-8443-6dfd0ef3b6b2",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1850000000N1",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn 1 Đã CHÀ NHÁM 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-02T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 65
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 335
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "eb615888-d766-45d6-8988-adf3d6c50a1b",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1850000000KC",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn 1 Đã KHOAN",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M014",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M015",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M017",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M019",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 4,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-04T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 19
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 153
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-03",
+                                            "Quantity": 153
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-04",
+                                            "Quantity": 75
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "61f88564-1415-4396-8b51-aa4b4523a4bc",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1850000000C3",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn 1 Đã CNC",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M011",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M012",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M013",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 3,
+                                    "StartDate": "2026-09-04T00:00:00",
+                                    "EndDate": "2026-09-04T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-04",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "c2a29513-a990-4d84-92b5-b031312305e6",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1850000000CC",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn 1 Đã CẮT",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M002",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 1,
+                                    "StartDate": "2026-09-04T00:00:00",
+                                    "EndDate": "2026-09-10T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-04",
+                                            "Quantity": 52
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-05",
+                                            "Quantity": 80
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-07",
+                                            "Quantity": 80
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-08",
+                                            "Quantity": 80
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-09",
+                                            "Quantity": 80
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-10",
+                                            "Quantity": 28
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "32e28f0f-091c-4eea-9523-557b39ee403a",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1850000000",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 6,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-01T00:00:00",
+                                    "EndDate": "2026-09-02T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-01",
+                                            "Quantity": 220
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 180
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "eec32c92-5bfd-4752-acbd-3e0c15026b11",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1830000000PU",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Mặt bàn WNL (1500*650*20) - Bàn 1 Đã PU",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-04T00:00:00",
+                                    "EndDate": "2026-09-05T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-04",
+                                            "Quantity": 174
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-05",
+                                            "Quantity": 226
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "4b8e70a5-39e8-4f37-9b36-cbff219ed7e2",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1830000000N2",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Mặt bàn WNL (1500*650*20) - Bàn 1 Đã CHÀ NHÁM 2",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-02T00:00:00",
+                                    "EndDate": "2026-09-02T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "329ec5e0-e232-4338-82e0-c5dc73a6391d",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1830000000SL",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Mặt bàn WNL (1500*650*20) - Bàn 1 Đã SƠN LÓT",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 8,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-05T00:00:00",
+                                    "EndDate": "2026-09-07T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-05",
+                                            "Quantity": 286
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-07",
+                                            "Quantity": 114
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "57d59c86-2487-4f0c-b62c-dd614709d8ef",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1830000000N1",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Mặt bàn WNL (1500*650*20) - Bàn 1 Đã CHÀ NHÁM 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-02T00:00:00",
+                                    "EndDate": "2026-09-03T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 281
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-03",
+                                            "Quantity": 119
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "f475a035-61b3-4210-b16a-3a39ab22e633",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1830000000C2",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Mặt bàn WNL (1500*650*20) - Bàn 1 Đã CNC",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M011",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M012",
+                                            "TimeResource": 240
+                                        },
+                                        {
+                                            "ResourceID": "M013",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 3,
+                                    "StartDate": "2026-09-04T00:00:00",
+                                    "EndDate": "2026-09-07T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-04",
+                                            "Quantity": 16
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-05",
+                                            "Quantity": 264
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-07",
+                                            "Quantity": 120
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "7ae9b1ba-bcdb-46bf-ac73-8f4bdeedd497",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "BTP1830000000",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Mặt bàn WNL (1500*650*20) - Bàn 1",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 6,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-02T00:00:00",
+                                    "EndDate": "2026-09-03T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-02",
+                                            "Quantity": 360
+                                        },
+                                        {
+                                            "ProductionDate": "2026-09-03",
+                                            "Quantity": 40
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2141": "5C6B24C4-DD2A-4699-CEB6-3D1E3954808C",
+                                    "APK_MT2142": "381dda9f-4ec5-406c-b2f0-52a5d5655e56",
+                                    "OrderNo": "KSX/09/2026/0006-LD",
+                                    "FinishedProductCode": "45501825985061",
+                                    "SemiFinishedProductCode": "45501825985061",
+                                    "FinishedProductName": "Test Bàn 2",
+                                    "SemiFinishedProductName": "Test Bàn 2",
+                                    "TotalQuantity": 400.0,
+                                    "ResourceIDs": [
+                                        {
+                                            "ResourceID": "M000",
+                                            "TimeResource": 240
+                                        }
+                                    ],
+                                    "ResourceWorker": 5,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-09-03T00:00:00",
+                                    "EndDate": "2026-09-03T00:00:00",
+                                    "DueDate": "2026-09-09T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-09-03",
+                                            "Quantity": 400
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "APK": "380e1cbb-c8db-494c-aad0-3467f5d2cdef",
+                    "code": "KSX/03/2026/0001",
+                    "from": "2026-03-05",
+                    "to": "2026-03-20",
+                    "status": "Đang sản xuất",
+                    "suggestions": [
+                        {
+                            "key": "PA1_P2",
+                            "APK_MT2140": "80e1cbb0-c8db-494c-aad0-3467f5d2cdef",
+                            "title": "[KSX/03/2026/0001] Xep lai lich san xuat theo rang buoc nguon luc va thu tu cong doan",
+                            "description": "+ Phương án này sắp xếp lại lịch thực thi cho kế hoạch KSX/03/2026/0001 theo ràng buộc thứ tự công đoạn, công đoạn lớn và nguồn lực. + Lịch sản xuất khả thi được bố trí từ ngày 2026-03-05 đến ngày 2026-03-19. + Lịch mới vẫn nằm trong thời gian kết thúc sản xuất hiện tại và không cần điều chỉnh ngày giao hàng 2026-03-20. + Tổng số dòng sản xuất được sắp xếp lại: 6. + Nguồn lực được sử dụng trong lịch: M000, M010,M011, M014,M015,M019, M030,M031.",
+                            "priority": "P1",
+                            "template_no": 1,
+                            "can_apply": true,
+                            "content_lines": [
+                                "+ Phương án này sắp xếp lại lịch thực thi cho kế hoạch KSX/03/2026/0001 theo ràng buộc thứ tự công đoạn, công đoạn lớn và nguồn lực.",
+                                "+ Lịch sản xuất khả thi được bố trí từ ngày 2026-03-05 đến ngày 2026-03-19.",
+                                "+ Lịch mới vẫn nằm trong thời gian kết thúc sản xuất hiện tại và không cần điều chỉnh ngày giao hàng 2026-03-20.",
+                                "+ Tổng số dòng sản xuất được sắp xếp lại: 6.",
+                                "+ Nguồn lực được sử dụng trong lịch: M000, M010,M011, M014,M015,M019, M030,M031."
+                            ],
+                            "updates": [
+                                {
+                                    "APK_MT2140": "80e1cbb0-c8db-494c-aad0-3467f5d2cdef",
+                                    "APK_MT2141": "80e1cbb0-c8db-494c-aad0-3467f5d2cdef",
+                                    "APK_MT2142": "2458b3c5-74a7-544d-bb60-891f69893938",
+                                    "OrderNo": "KSX/03/2026/0001-NITORI",
+                                    "FinishedProductCode": "4550182598490",
+                                    "SemiFinishedProductCode": "BTP2850000000CC",
+                                    "FinishedProductName": "Bàn NITORI WNL",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn NITORI Đã CẮT",
+                                    "TotalQuantity": 600.0,
+                                    "ResourceIDs": "M010,M011",
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 2,
+                                    "StartDate": "2026-03-05T00:00:00",
+                                    "EndDate": "2026-03-07T23:59:00",
+                                    "DueDate": "2026-03-18T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-03-05",
+                                            "Quantity": 240
+                                        },
+                                        {
+                                            "ProductionDate": "2026-03-06",
+                                            "Quantity": 240
+                                        },
+                                        {
+                                            "ProductionDate": "2026-03-07",
+                                            "Quantity": 120
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "80e1cbb0-c8db-494c-aad0-3467f5d2cdef",
+                                    "APK_MT2141": "80e1cbb0-c8db-494c-aad0-3467f5d2cdef",
+                                    "APK_MT2142": "74081407-2ac0-5748-8aae-26d612396bae",
+                                    "OrderNo": "KSX/03/2026/0001-NITORI",
+                                    "FinishedProductCode": "4550182598490",
+                                    "SemiFinishedProductCode": "BTP2850000000BA",
+                                    "FinishedProductName": "Bàn NITORI WNL",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn NITORI Đã BÀO",
+                                    "TotalQuantity": 600.0,
+                                    "ResourceIDs": "M000",
+                                    "ResourceWorker": 18,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-03-06T00:00:00",
+                                    "EndDate": "2026-03-08T23:59:00",
+                                    "DueDate": "2026-03-18T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-03-08",
+                                            "Quantity": 600
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "80e1cbb0-c8db-494c-aad0-3467f5d2cdef",
+                                    "APK_MT2141": "80e1cbb0-c8db-494c-aad0-3467f5d2cdef",
+                                    "APK_MT2142": "696c791e-ff06-592b-9956-c0a7fd3cdd21",
+                                    "OrderNo": "KSX/03/2026/0001-NITORI",
+                                    "FinishedProductCode": "4550182598490",
+                                    "SemiFinishedProductCode": "BTP2850000000PH",
+                                    "FinishedProductName": "Bàn NITORI WNL",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn NITORI Đã PHAY",
+                                    "TotalQuantity": 600.0,
+                                    "ResourceIDs": "M030,M031",
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 2,
+                                    "StartDate": "2026-03-08T00:00:00",
+                                    "EndDate": "2026-03-11T23:59:00",
+                                    "DueDate": "2026-03-18T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-03-09",
+                                            "Quantity": 240
+                                        },
+                                        {
+                                            "ProductionDate": "2026-03-10",
+                                            "Quantity": 240
+                                        },
+                                        {
+                                            "ProductionDate": "2026-03-11",
+                                            "Quantity": 120
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "80e1cbb0-c8db-494c-aad0-3467f5d2cdef",
+                                    "APK_MT2141": "80e1cbb0-c8db-494c-aad0-3467f5d2cdef",
+                                    "APK_MT2142": "60fc88f4-875b-5c15-a603-ddba64412e6f",
+                                    "OrderNo": "KSX/03/2026/0001-NITORI",
+                                    "FinishedProductCode": "4550182598490",
+                                    "SemiFinishedProductCode": "BTP2850000000KC",
+                                    "FinishedProductName": "Bàn NITORI WNL",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn NITORI Đã KHOAN",
+                                    "TotalQuantity": 600.0,
+                                    "ResourceIDs": "M014,M015,M019",
+                                    "ResourceWorker": 0,
+                                    "ResourceMachine": 3,
+                                    "StartDate": "2026-03-10T00:00:00",
+                                    "EndDate": "2026-03-14T23:59:00",
+                                    "DueDate": "2026-03-18T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-03-12",
+                                            "Quantity": 288
+                                        },
+                                        {
+                                            "ProductionDate": "2026-03-13",
+                                            "Quantity": 288
+                                        },
+                                        {
+                                            "ProductionDate": "2026-03-14",
+                                            "Quantity": 24
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "80e1cbb0-c8db-494c-aad0-3467f5d2cdef",
+                                    "APK_MT2141": "80e1cbb0-c8db-494c-aad0-3467f5d2cdef",
+                                    "APK_MT2142": "27e034b5-ae4a-5925-980b-6b125b4c827e",
+                                    "OrderNo": "KSX/03/2026/0001-NITORI",
+                                    "FinishedProductCode": "4550182598490",
+                                    "SemiFinishedProductCode": "BTP2850000000N2",
+                                    "FinishedProductName": "Bàn NITORI WNL",
+                                    "SemiFinishedProductName": "Chân WNL (580*550*30) - Bàn NITORI Đã CHÀ NHÁM 2",
+                                    "TotalQuantity": 600.0,
+                                    "ResourceIDs": "M000",
+                                    "ResourceWorker": 22,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-03-13T00:00:00",
+                                    "EndDate": "2026-03-15T23:59:00",
+                                    "DueDate": "2026-03-18T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-03-15",
+                                            "Quantity": 600
+                                        }
+                                    ]
+                                },
+                                {
+                                    "APK_MT2140": "80e1cbb0-c8db-494c-aad0-3467f5d2cdef",
+                                    "APK_MT2141": "80e1cbb0-c8db-494c-aad0-3467f5d2cdef",
+                                    "APK_MT2142": "f79fdb39-1b59-58b5-b5a0-25721e3830bc",
+                                    "OrderNo": "KSX/03/2026/0001-NITORI",
+                                    "FinishedProductCode": "4550182598490",
+                                    "SemiFinishedProductCode": "BTP2850000000LR",
+                                    "FinishedProductName": "Bàn NITORI WNL",
+                                    "SemiFinishedProductName": "Cụm chân WNL - Bàn NITORI Đã LẮP RÁP",
+                                    "TotalQuantity": 600.0,
+                                    "ResourceIDs": "M000",
+                                    "ResourceWorker": 12,
+                                    "ResourceMachine": 0,
+                                    "StartDate": "2026-03-18T00:00:00",
+                                    "EndDate": "2026-03-19T23:59:00",
+                                    "DueDate": "2026-03-20T00:00:00",
+                                    "DailyQty": [
+                                        {
+                                            "ProductionDate": "2026-03-19",
+                                            "Quantity": 600
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "analysis": "Nội dung phân tích tổng hợp nhiều kế hoạch:\n- Tổng số kế hoạch đã phân tích: 2.\n- KH KSX/09/2026/0006, trạng thái: Chưa sản xuất: Nội dung phân tích kế hoạch sản xuất: 1. Thành phẩm 45501825985061-Test Bàn 2 (BTP BTP1910000000SL-Ván tầng WNL (1118*200*15.5) - Bàn 1 Đã SƠN LÓT) của đơn hàng KSX/09/2026/0006-LD-LD đang trễ tiến độ; công đoạn ảnh hưởng lớn nhất là CD0....\n- KH KSX/03/2026/0001, trạng thái: Đang sản xuất: Nội dung phân tích kế hoạch sản xuất: 1. Bán thành phẩm BTP2850000000BA-Chân WNL (580*550*30) - Bàn NITORI Đã BÀO của thành phẩm 4550182598490-Bàn NITORI WNL của đơn hàng KSX/03/2026/0001-NITORI đang bị chặn bởi công đoạn trước đó, mặc d...."
+    }
+}

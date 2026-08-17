@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Chi tiết kế hoạch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../assets/css/ke-hoach.css">
+  <link rel="stylesheet" href="../assets/css/ke-hoach-detail.css">
+</head>
+<body>
+  <div class="page">
+    <div class="page-head" style="gap:12px;align-items:flex-start;">
+      <div class="page-title" style="display:flex;flex-direction:column;gap:6px;">
+        <div class="h1" id="pageTitle" style="color:var(--blue);background:var(--primary-soft);padding:10px 18px 10px 0px;border-radius:12px;display:inline-block;">Chi tiết kế hoạch</div>
+        <div style="display:flex;gap:10px;align-items:center;color:#667085;font-size:13px;">
+          <a href="./ke-hoach.html" style="color:var(--blue);text-decoration:none;"><i class="bi bi-arrow-left"></i> Quay lại danh sách</a>
+          <span id="planMeta"></span>
+        </div>
+      </div>
+
+      <div class="head-actions" style="margin-left:auto;">
+        <button class="btn ghost" id="btnExportExcel" title="Xuất Excel">
+          <i class="bi bi-file-earmark-excel"></i>
+        </button>
+        <button class="btn ghost" id="btnReload" title="Tải lại">
+          <i class="bi bi-arrow-clockwise"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="table-wrap" style="max-height:85vh; overflow:auto;">
+        <table class="table" id="plan-calendar-table">
+          <thead id="theadPlanCalendar"></thead>
+          <tbody id="tbodyPlanCalendar"></tbody>
+        </table>
+      </div>
+      <div id="emptyHint" style="display:none;padding:14px;color:#667085;font-size:14px;">Chưa có dữ liệu để hiển thị.</div>
+      <div id="errorHint" style="display:none;padding:14px;color:#b42318;font-size:14px;"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="../assets/js/ke-hoach-detail.js"></script>
+</body>
+</html>

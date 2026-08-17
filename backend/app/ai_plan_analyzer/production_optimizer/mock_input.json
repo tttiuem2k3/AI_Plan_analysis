@@ -1,0 +1,107 @@
+{
+  "Rules": {
+    "Top_n": 3,
+    "DeptExclusive": true,
+    "StrictDailyQty": false
+  },
+  "ProductionPlan": [
+    {
+      "Master": {
+        "VoucherNo": "KHSX/04/2026/001",
+        "Status": "Đang sản xuất"
+      },
+      "Detail": [
+        {
+          "OrderNo": "DH001",
+          "CustomerName": "NITORI",
+          "ProductionSequence": 1,
+          "PhaseID": "CD010",
+          "PhaseName": "CẮT",
+          "PhaseGroupName": "TỔ CẮT",
+          "ResourceIDs": [{ "ResourceID": "M010", "TimeResource": 30 }],
+          "ResourceNames": "CƯA 1",
+          "FinishedProductCode": "TP001",
+          "FinishedProductName": "Table Top",
+          "SemiFinishedProductCode": "BTP001",
+          "SemiFinishedProductName": "Panel",
+          "ResourceWorker": 2,
+          "ResourceManchine": 1,
+          "TimeLimit": 2,
+          "TotalQuantity": 300,
+          "StartDate": "2026-04-10T08:00:00",
+          "EndDate": "2026-04-10T16:00:00",
+          "DueDate": "2026-04-11T17:00:00",
+          "ProductionCapacity": 225,
+          "OvertimeCapacity": 120,
+          "DailyQty": [
+            { "ProductionDate": "2026-04-10", "Quantity": 150 },
+            { "ProductionDate": "2026-04-11", "Quantity": 150 }
+          ]
+        },
+        {
+          "OrderNo": "DH001",
+          "CustomerName": "NITORI",
+          "ProductionSequence": 2,
+          "PhaseID": "CD020",
+          "PhaseName": "BÀO",
+          "PhaseGroupName": "TỔ BÀO",
+          "ResourceIDs": [
+            { "ResourceID": "M020", "TimeResource": 20 },
+            { "ResourceID": "M021", "TimeResource": 20 }
+          ],
+          "ResourceNames": "BÀO 1, BÀO 2",
+          "FinishedProductCode": "TP001",
+          "FinishedProductName": "Table Top",
+          "SemiFinishedProductCode": "BTP002",
+          "SemiFinishedProductName": "Panel Fine",
+          "ResourceWorker": 2,
+          "ResourceManchine": 2,
+          "TimeLimit": 2,
+          "TotalQuantity": 300,
+          "StartDate": "2026-04-11T08:00:00",
+          "EndDate": "2026-04-11T16:00:00",
+          "DueDate": "2026-04-12T17:00:00",
+          "ProductionCapacity": 230,
+          "OvertimeCapacity": 120,
+          "DailyQty": [
+            { "ProductionDate": "2026-04-11", "Quantity": 180 },
+            { "ProductionDate": "2026-04-12", "Quantity": 120 }
+          ]
+        }
+      ]
+    }
+  ],
+  "RelatedProductionPlans": [
+    {
+      "Master": {
+        "VoucherNo": "KHSX/04/2026/099",
+        "Status": "Đang sản xuất"
+      },
+      "Detail": [
+        {
+          "OrderNo": "DHX",
+          "CustomerName": "ABC",
+          "ProductionSequence": 1,
+          "PhaseID": "CD010",
+          "PhaseName": "CẮT",
+          "PhaseGroupName": "TỔ CẮT",
+          "ResourceIDs": [{ "ResourceID": "M010", "TimeResource": 25 }],
+          "ResourceNames": "CƯA 1",
+          "FinishedProductCode": "TPX",
+          "FinishedProductName": "Other",
+          "SemiFinishedProductCode": "BTPX",
+          "SemiFinishedProductName": "Other",
+          "ResourceWorker": 1,
+          "ResourceManchine": 1,
+          "TimeLimit": 2,
+          "TotalQuantity": 100,
+          "StartDate": "2026-04-10T09:00:00",
+          "EndDate": "2026-04-10T11:00:00",
+          "DueDate": "2026-04-11T17:00:00",
+          "ProductionCapacity": 100,
+          "OvertimeCapacity": 40
+        }
+      ]
+    }
+  ]
+}

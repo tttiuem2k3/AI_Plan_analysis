@@ -1,0 +1,137 @@
+<!-- frontend\index.html -->
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>ASOFT - AI Dự báo & Kế hoạch sản xuất</title>
+
+  <!-- Font Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="header-left">
+      <img src="assets/icons/icon-asf-navigation.png" class="header-logo-img" alt="ASOFT Logo">
+
+      <div class="header-title">
+        <span class="header-title-main">ASOFT - AI TỐI ƯU SẢN XUẤT</span>
+        <span class="header-title-sub">Production Planning • Forecasting • Optimization</span>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <span class="header-period">GENEPA - 12/2025</span>
+
+      <!-- Icon thông báo -->
+      <button class="header-icon-box notify" type="button" aria-label="Thông báo">
+        <i class="bi bi-bell-fill"></i>
+        <span class="notify-badge">3</span>
+      </button>
+
+      <!-- Thông tin user -->
+      <div class="header-user">
+        <span class="header-user-name">TRẦN TẤN THỊNH</span>
+        <span class="header-user-role">AI • Admin</span>
+      </div>
+
+      <!-- Icon admin -->
+      <button class="header-icon-box admin" type="button" aria-label="Quản trị">
+        <i class="bi bi-person-fill-gear"></i>
+      </button>
+    </div>
+  </header>
+
+ <!-- ================= MAIN ================= -->
+  <div class="app-body">
+
+    
+
+    <!-- VÙNG HOVER MÉP TRÁI (auto mở menu sau 3s) -->
+    <div id="leftHoverZone" class="left-hover-zone" aria-hidden="true"></div>
+
+    <!-- ===== MENU NGHIỆP VỤ ===== -->
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-head">
+        <div class="sidebar-head-row">
+          <div>
+            <div class="sidebar-title">NGHIỆP VỤ</div>
+            <div class="sidebar-sub">Chọn nghiệp vụ để thao tác</div>
+          </div>
+
+          <!-- Nút thu gọn menu (không viền, không nền) -->
+          <button id="menuCollapseBtn" class="menu-collapse-btn" type="button" aria-label="Thu gọn menu">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+        </div>
+      </div>
+
+
+      <ul class="menu" id="menuList">
+        <li data-url="pages/nguon-luc.html">
+          <i class="bi bi-box-seam"></i>
+          <span>A. Định mức nguồn lực</span>
+        </li>
+
+        <li data-url="pages/dinh-muc.html">
+          <i class="bi bi-diagram-3"></i>
+          <span>B. Định mức sản phẩm</span>
+        </li>
+
+        <li data-url="pages/don-hang.html">
+          <i class="bi bi-receipt"></i>
+          <span>C. Đơn hàng sản xuất</span>
+        </li>
+
+        <li class="active" data-url="pages/ke-hoach.html">
+          <i class="bi bi-calendar2-check"></i>
+          <span>D. Kế hoạch sản xuất</span>
+        </li>
+
+        <li data-url="pages/thong-ke.html">
+          <i class="bi bi-bar-chart-line"></i>
+          <span>E. Thống kê kết quả</span>
+        </li>
+
+        <li data-url="pages/canh-bao.html">
+          <i class="bi bi-exclamation-triangle"></i>
+          <span>F. Cảnh báo sản xuất</span>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="quick-tip">
+          <i class="bi bi-lightbulb"></i>
+          <span>Mẹo: Bắt đầu từ <b>Đơn hàng sản xuất</b> để AI tự tạo kế hoạch.</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===== CONTENT ===== -->
+    <main class="content">
+      <div class="content-shell">
+        <iframe id="contentFrame" src="pages/ke-hoach.html" frameborder="0"></iframe>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- ================= JS ================= -->
+  <script src="assets/js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1028 @@
+﻿/* =========================================================
+  # DINH-MUC.CSS (ĐỊNH MỨC SẢN PHẨM)
+========================================================= */
+
+
+/* =========================================================
+  1) BIẾN MÀU / SPACING / RADIUS (CSS VARIABLES)
+========================================================= */
+:root {
+  /* Màu nền + chữ */
+  --bg: #ffffff;
+  --text: #303030;
+  --title: #0F172A;
+  --muted: #005085;
+  --muted-2: #535353;
+
+  /* Đường kẻ / nền hover / nền header bảng */
+  --line: #F1F5F9;
+  --hover: #F8FAFC;
+  --thead: #e6e6e686; /* nền tên trường (header bảng) xám đậm hơn */
+
+  /* Màu brand */
+  --primary: #006EB4;
+  --primary-hover: #005C98;
+
+  /* Màu semantic */
+  --green: #15803D;
+  --red: #DC2626;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+
+  /* Padding table */
+  --pad-th: 16px 20px;
+  --pad-td: 10px 20px;
+
+  /* Modal */
+  --overlay: rgba(15, 23, 42, 0.40);
+  --shadow-modal: 0 24px 70px rgba(2, 6, 23, 0.25);
+
+  /* Kích thước nút thao tác (hình vuông bo góc) */
+  --btn-square: 28px; /* giảm kích thước nút thao tác nhỏ hơn */
+  --btn-radius: 8px;  /* bo góc nhỏ hơn */
+
+  /* Nút (pill style nhưng đang dùng dạng vuông bo góc) */
+  --pill-neutral-bg: #F1F5F9;
+  --pill-neutral-br: #E2E8F0;
+  --pill-neutral-tx: #0F172A;
+
+  --pill-blue-bg: #e0f3ff;
+  --pill-blue-br: #005eaa;
+  --pill-blue-tx: #00386d;
+
+  --pill-green-bg: #cff8dd;
+  --pill-green-br: #30a85e;
+  --pill-green-tx: #15803e;
+
+  --pill-red-bg: #FEECEC;
+  --pill-red-br: #a04646;
+  --pill-red-tx: #DC2626;
+
+  /* Nút thư viện BTP (màu vàng) */
+  --pill-amber-bg: #ffffff;
+  --pill-amber-br: #a5891a;
+  --pill-amber-tx: #D97706;
+
+  /* Nút Lưu (xanh lam: rgb(0,191,255)) */
+  --save-blue: rgb(0, 40, 128);
+  --save-blue-bg: rgb(255, 255, 255);
+  --save-blue-br: rgb(0, 40, 128);
+
+  /* Nút Hủy (tím: rgb(148,0,211)) */
+  --cancel-purple: rgb(131, 0, 0);
+  --cancel-purple-bg: rgb(255, 255, 255);
+  --cancel-purple-br: rgba(131, 0, 0, 0.849);
+
+  /* Nút Gỡ BTP (nâu: rgb(139,69,19)) */
+  --unlink-brown: rgb(105, 52, 13);
+  --unlink-brown-bg: rgba(163, 114, 79, 0.12);
+  --unlink-brown-br: rgba(110, 63, 29, 0.45);
+
+  /* Màu expander (mũi tên) */
+  --expander-black: #000000;
+
+  /* Badge pastel (nếu dùng) */
+  --badge-green-bg: #ECFDF3;
+  --badge-green-text: #16A34A;
+
+  --badge-blue-bg: #EFF6FF;
+  --badge-blue-text: #2563EB;
+
+  --badge-amber-bg: #FFFBEB;
+  --badge-amber-text: #D97706;
+
+  /* Tạo bảng màu pastel cho tối đa 10 nhóm TP, lặp lại nếu nhiều hơn */
+  --btp-group-1: #e0f7fa;
+  --btp-group-2: #ffe0b2;
+  --btp-group-3: #e1bee7;
+  --btp-group-4: #c8e6c9;
+  --btp-group-5: #fff9c4;
+  --btp-group-6: #f8bbd0;
+  --btp-group-7: #d1c4e9;
+  --btp-group-8: #b3e5fc;
+  --btp-group-9: #ffecb3;
+  --btp-group-10: #c5cae9;
+}
+
+
+/* =========================================================
+  2) RESET / BASE
+========================================================= */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: Inter, Roboto, "Segoe UI", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button, input, select { font-family: inherit; }
+
+/* Tiện ích ẩn hiện */
+.hidden,
+.is-hidden { display: none !important; }
+
+
+/* =========================================================
+  3) HEADER TRANG (TIÊU ĐỀ + TÌM KIẾM + NÚT)
+========================================================= */
+.page {
+  padding: 18px;
+  padding-top: 16px;
+}
+
+.page-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 17px;
+}
+
+.page-title .h1 {
+  /* Match heading treatment used in don-hang/ke-hoach */
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary);
+  padding: 7px 18px 10px 0px;
+}
+
+.head-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Ô tìm kiếm dạng pill */
+.search {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  min-width: 320px;
+  border-radius: 999px;
+  border: 1px solid var(--pill-neutral-br);
+  background: #fff;
+}
+
+.search i {
+  color: var(--muted-2);
+  font-size: 14px;
+}
+
+.search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.search input::placeholder {
+  color: var(--muted-2);
+}
+
+/* Nút chung */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--pill-neutral-br);
+  background: #fff;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .12s ease, border-color .12s ease, transform .10s ease;
+}
+
+.btn:hover {
+  background: var(--hover);
+  border-color: #CBD5E1;
+  transform: translateY(-1px);
+}
+
+.btn.primary {
+  border-color: transparent;
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn.danger {
+  border-color: transparent;
+  background: var(--red);
+  color: #fff;
+}
+
+.btn.danger:hover {
+  background: #B91C1C;
+}
+
+.bi-arrow-clockwise {
+  color: #116fac;
+  -webkit-text-stroke: 1px #116fac;
+  background: transparent; /* nền không màu */
+}
+/* =========================================================
+  4) CARD / KHUNG BẢNG
+========================================================= */
+.card {
+  background: var(--bg);
+  border-radius: var(--radius-md);
+  border: none;
+  box-shadow: none;
+  overflow: hidden;
+  height: auto;
+  min-height: 0;
+}
+
+.table-wrap {
+  height: calc(100vh - 100px); /* Tùy chỉnh số px trừ đi header, actions, margin... */
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  display: block;
+}
+
+/* =========================
+   TABLE-WRAP RIÊNG CHO MODAL THƯ VIỆN BTP
+   - Không dùng height/max-height giống table ngoài
+   - Chỉ scroll trong modal
+========================= */
+#modalBtpLibrary .table-wrap {
+  height: auto;
+  max-height: calc(80vh - 170px); /* 80vh (modal-xl) trừ head + search + padding */
+  overflow-y: auto;
+}
+
+/* nếu cần giới hạn cho đúng class đang dùng trong html: <div class="table-wrap slim"> */
+#modalBtpLibrary .table-wrap.slim {
+  height: auto;
+  max-height: calc(80vh - 170px);
+  overflow-y: auto;
+}
+
+
+/* =========================================================
+  5) BẢNG DỮ LIỆU (TỐI GIẢN)
+========================================================= */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  color: var(--text);
+  table-layout: fixed;
+}
+
+/* Header bảng: in hoa nhẹ + nền xám */
+.table thead th {
+  padding: var(--pad-th);
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+
+  background: var(--thead);
+  border-bottom: 1px solid var(--line);
+
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* Bo góc cho header */
+.table thead th:first-child { border-top-left-radius: 12px; }
+.table thead th:last-child  { border-top-right-radius: 12px; }
+
+/* Cell dữ liệu */
+.table tbody td {
+  padding: var(--pad-td);
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+/* Thu gọn khoảng cách giữa cột mũi tên và cột STT (giống định mức nguồn lực) */
+.table thead th:nth-child(1),
+.table tbody td:nth-child(1) {
+  width: 28px;
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: center;
+}
+
+.table thead th:nth-child(2),
+.table tbody td:nth-child(2) {
+  width: 34px;
+  padding-left: 0;
+  padding-right: 0px;
+  text-align: left;
+}
+
+/* Hover row */
+.table tbody tr:hover td {
+  background: var(--hover);
+}
+
+/* Cột có số: hiển thị đều */
+.cell-ma,
+.cell-dl,
+.cell-tg,
+.cell-tt {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Cột "Mã": KHÔNG in đậm */
+.cell-ma {
+  font-weight: 400;
+  color: var(--text);
+}
+
+/* Optional: adjust spacing for cell-stt */
+.cell-stt {
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: bold; /* Không in đậm */
+  color: var(--text); /* Màu giống các trường khác */
+}
+
+
+/* =========================================================
+  6) NHẬN DIỆN TP / BTP (TỐI GIẢN - DỄ NHÌN)
+========================================================= */
+/* Luôn trắng, phân biệt bằng accent mảnh bên trái */
+.table tbody tr.row-tp td,
+.table tbody tr.row-btp td {
+  background: #fff !important;
+}
+
+/* Nền mặc định cho TP: xanh nhạt */
+.table tbody tr.row-tp td {
+  background: rgba(34, 197, 94, 0.007) !important;
+  transition: background 0.18s;
+}
+
+/* Hover row TP: xanh đậm hơn */
+.table tbody tr.row-tp:hover td {
+  background: rgba(34, 197, 94, 0.13) !important;
+}
+
+/* Chừa chỗ cho accent */
+.table tbody tr.row-tp td:first-child,
+.table tbody tr.row-btp td:first-child {
+  position: relative;
+  padding-left: 12px;
+}
+
+/* Accent TP (xanh) */
+.table tbody tr.row-tp td:first-child::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  bottom: 10px;
+  width: 3px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.55);
+}
+
+/* Accent BTP (vàng) */
+.table tbody tr.row-btp td:first-child::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  bottom: 10px;
+  width: 3px;
+  border-radius: 999px;
+  background: rgba(245, 158, 11, 0.60);
+}
+
+/* Hover tint cực nhẹ */
+.table tbody tr.row-tp:hover td {
+  background: rgba(34, 197, 94, 0.137) !important;
+}
+.table tbody tr.row-btp:hover td {
+  background: rgba(200, 130, 9, 0.103) !important;
+}
+
+/* Cột Loại: nhấn mạnh TP/BTP */
+.table tbody tr.row-tp td:nth-child(3) {
+  color: var(--green);
+  font-weight: 700;
+}
+.table tbody tr.row-btp td:nth-child(3) {
+  color: #B45309;
+  font-weight: 700;
+}
+
+/* Thụt dòng BTP */
+.indent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Thêm style cho branch-img (dùng ảnh PNG) */
+.branch-img {
+  display: inline-block;
+  width: 22px;
+  height: 32px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin: 0 auto;
+  /* Có thể thêm shadow nhẹ nếu muốn nổi bật */
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.08));
+}
+
+/* XÓA style nhóm màu BTP theo TP */
+/* ========== NHÓM MÀU BTP THEO TP ========== */
+/* Đã bỏ, trả về style mặc định */
+
+/* Nhấn mạnh khi hover */
+.table tbody tr.row-btp.group-btp-1:hover td { background: #b2ebf2 !important; }
+.table tbody tr.row-btp.group-btp-2:hover td { background: #ffe082 !important; }
+.table tbody tr.row-btp.group-btp-3:hover td { background: #ce93d8 !important; }
+.table tbody tr.row-btp.group-btp-4:hover td { background: #a5d6a7 !important; }
+.table tbody tr.row-btp.group-btp-5:hover td { background: #fff59d !important; }
+.table tbody tr.row-btp.group-btp-6:hover td { background: #f48fb1 !important; }
+.table tbody tr.row-btp.group-btp-7:hover td { background: #b39ddb !important; }
+.table tbody tr.row-btp.group-btp-8:hover td { background: #81d4fa !important; }
+.table tbody tr.row-btp.group-btp-9:hover td { background: #ffe082 !important; }
+.table tbody tr.row-btp.group-btp-10:hover td { background: #9fa8da !important; }
+
+/* Đậm border trái cho BTP cùng nhóm khi TP cha được expand */
+.table tbody tr.row-btp[class*="group-btp-"] td:first-child::before {
+  display: none;
+}
+
+/* Định mức sản phẩm: căn lại khối nút thao tác cho hàng Bán thành phẩm */
+.table tbody tr.row-btp td:last-child .actions {
+  padding-left: 5px;
+}
+
+/* =========================================================
+  7) NÚT MŨI TÊN (EXPANDER)
+  - Icon-only: đen đậm
+  - Không viền, không nền
+========================================================= */
+.expander {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-text-stroke: 1px;
+  color: var(--expander-black);
+  border-radius: var(--btn-radius); /* bo góc để hover đẹp */
+  cursor: pointer;
+
+  transition: background .12s ease, transform .10s ease;
+}
+
+.expander i {
+  font-size: 14px;
+  font-weight: 900;
+  color: currentColor;
+}
+
+.expander:hover {
+  background: rgba(15, 23, 42, 0.06);
+  transform: translateY(-1px);
+}
+
+.expander:active {
+  background: rgba(15, 23, 42, 0.08);
+  transform: translateY(0px);
+}
+
+.expander:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* =========================================================
+  8) NÚT THAO TÁC (ADD/EDIT/DELETE/...)
+  - Hình vuông bo góc
+  - Icon đậm hơn + nền cùng màu nhạt
+========================================================= */
+.actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Nút icon dạng "ô vuông bo góc" */
+.icon {
+  width: var(--btn-square);
+  height: var(--btn-square);
+  padding: 0;
+
+  border-radius: var(--btn-radius);
+  border: 1px solid var(--pill-neutral-br);
+  background: var(--pill-neutral-bg);
+  color: var(--pill-neutral-tx);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: transform .10s ease, filter .12s ease, box-shadow .12s ease;
+}
+
+.icon i {
+  font-size: 16px;
+  font-weight: 800;
+  color: currentColor;
+}
+
+.icon:hover {
+  filter: brightness(0.98);
+  box-shadow: 0 6px 16px rgba(2, 6, 23, 0.08);
+  transform: translateY(-1px);
+}
+
+.icon:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Nút + (class primary) */
+.icon.primary {
+  background: var(--pill-blue-bg);
+  border-color: var(--pill-blue-br);
+  color: var(--pill-blue-tx);
+}
+
+/* Nút cập nhật: tất cả action bắt đầu bằng "edit" */
+button.icon[data-action^="edit"] {
+  background: var(--pill-green-bg);
+  border-color: var(--pill-green-br);
+  color: var(--pill-green-tx);
+}
+
+/* Nút xóa (class danger) */
+.icon.danger {
+  background: var(--pill-red-bg);
+  border-color: var(--pill-red-br);
+  color: var(--pill-red-tx);
+}
+
+/* Nút mở thư viện BTP */
+button.icon[data-action="open-btp-lib"] {
+  background: var(--pill-amber-bg);
+  border-color: var(--pill-amber-br);
+  color: var(--pill-amber-tx);
+}
+
+/* Nút Lưu: xanh lam rgb(0,191,255) */
+button.icon[data-action="save-new-btp"] {
+  background: var(--save-blue-bg);
+  border-color: var(--save-blue-br);
+  color: var(--save-blue);
+}
+
+/* Nút Hủy: tím rgb(148,0,211) */
+button.icon[data-action="cancel-new-btp"] {
+  background: var(--cancel-purple-bg);
+  border-color: var(--cancel-purple-br);
+  color: var(--cancel-purple);
+}
+
+/* Nút Gỡ BTP: nâu rgb(139,69,19) */
+button.icon[data-action="unlink-btp"] {
+  background: var(--unlink-brown-bg);
+  border-color: var(--unlink-brown-br);
+  color: var(--unlink-brown);
+}
+
+
+/* =========================================================
+  9) INPUT / SELECT (DÒNG THÊM MỚI + MODAL)
+========================================================= */
+.input, .select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
+  outline: none;
+  font-size: 13px;
+  color: var(--text);
+  background: #fff;
+}
+
+.input:focus, .select:focus {
+  border-color: #93C5FD;
+  box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.25);
+}
+
+/* Hint / Tip */
+.hint {
+  font-size: 12px;
+  color: var(--muted);
+}
+.tip {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.tip i { color: var(--muted-2); }
+
+/* Disable wrapper (TP không chọn công đoạn) */
+.is-disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* =========================================================
+  Disabled fields (Modal)
+========================================================= */
+/* Chỉ làm mờ trường Mã sản phẩm khi update */
+#modalProduct #fMa:disabled,
+#modalProduct #fLoai:disabled {
+  background: #f1f5f9;
+  color: #64748b;
+  border-color: #e2e8f0;
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+#modalProduct label:has(#fMa:disabled) span,
+#modalProduct label:has(#fLoai:disabled) span {
+  color: #94a3b8;
+}
+
+/* (Backward compatible) Nếu browser không hỗ trợ :has thì vẫn mờ input nhờ rule #fMa:disabled phía trên */
+
+/* ...existing code...
+   (xoá áp dụng chung cho mọi input/select disabled nếu không muốn ảnh hưởng các field khác)
+*/
+#modalProduct input:disabled,
+#modalProduct select:disabled {
+  background: initial;
+  color: inherit;
+  border-color: inherit;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+#modalProduct label:has(input:disabled) span,
+#modalProduct label:has(select:disabled) span {
+  color: inherit;
+}
+
+/* =========================================================
+  10) BADGE (NẾU DÙNG)
+========================================================= */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+}
+.badge.green { background: var(--badge-green-bg); color: var(--badge-green-text); }
+.badge.blue  { background: var(--badge-blue-bg);  color: var(--badge-blue-text); }
+.badge.amber { background: var(--badge-amber-bg); color: var(--badge-amber-text); }
+
+
+/* =========================================================
+  11) MODAL (THÊM/CẬP NHẬT + THƯ VIỆN BTP)
+========================================================= */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal {
+  width: min(760px, calc(100vw - 24px));
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  overflow: hidden;
+}
+
+.modal-xl {
+  width: min(1280px, calc(100vw - 24px)); /* tăng width lớn hơn mặc định */
+  max-width: 98vw;
+  height: 80vh;
+}
+
+.modal-head {
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.modal-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--title);
+}
+
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--muted-2);
+  transition: background .12s ease, color .12s ease;
+}
+
+.icon-btn:hover {
+  background: var(--hover);
+  color: #334155;
+}
+
+.modal-body { padding: 14px 16px; }
+
+.modal-foot {
+  padding: 14px 16px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  border-top: 1px solid var(--line);
+  background: #fff;
+}
+
+/* Grid form */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.grid input,
+.grid select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
+  outline: none;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.grid input:focus,
+.grid select:focus {
+  border-color: #93C5FD;
+  box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.25);
+}
+
+.col-2 { grid-column: 1 / span 2; }
+
+.library-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+
+/* =========================================================
+  12) CONFIRM DIALOG
+========================================================= */
+.confirm {
+  width: min(420px, calc(100vw - 24px));
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  padding: 14px 16px;
+}
+
+.confirm-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--title);
+}
+
+.confirm-msg {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.confirm-actions {
+  margin-top: 14px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+
+/* =========================================================
+  13) TOAST
+========================================================= */
+.toast-wrap {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 60;
+}
+
+.toast {
+  background: #fff;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 10px 12px;
+  min-width: 280px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.toast .t-title {
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--title);
+}
+
+.toast .t-msg {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+
+/* =========================================================
+  14) RESPONSIVE
+========================================================= */
+@media (max-width: 860px) {
+  .page-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .head-actions {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .search {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .table-wrap {
+    max-height: calc(100vh - 320px);
+  }
+
+  /* Modal BTP: màn nhỏ thì cho table cao hơn một chút */
+  #modalBtpLibrary .table-wrap,
+  #modalBtpLibrary .table-wrap.slim {
+    max-height: calc(80vh - 150px);
+  }
+}
+/* =========================================================
+   COLLAPSE MENU MƯỢT: Sidebar fixed + transform
+   - Menu trượt vào mép trái
+   - Content mở rộng đồng thời
+========================================================= */
+
+:root{
+  --header-h: 48px;
+  --sidebar-w: 250px;
+  --ease: cubic-bezier(.22,.8,.22,1);
+}
+
+/* app-body không dùng flex nữa để tránh giữ chỗ */
+.app-body{
+  position: relative;
+  height: calc(100vh - var(--header-h));
+  padding: 0 !important;
+  gap: 0 !important;
+}
+
+/* Sidebar: fixed, trượt bằng transform */
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: var(--header-h);
+  height: calc(100vh - var(--header-h));
+  width: var(--sidebar-w);
+  z-index: 25;
+
+  transform: translateX(0);
+  opacity: 1;
+
+  transition: transform .28s var(--ease), opacity .18s ease;
+}
+
+/* Content: chừa chỗ cho sidebar bằng margin-left */
+.content{
+  margin-left: var(--sidebar-w);
+  height: calc(100vh - var(--header-h));
+  width: calc(100% - var(--sidebar-w));
+  transition: margin-left .28s var(--ease), width .28s var(--ease);
+}
+
+/* content-shell/iframe full chiều cao */
+.content-shell{
+  height: 100%;
+}
+.content iframe{
+  height: 100%;
+}
+
+/* Khi collapsed: sidebar trượt ra ngoài trái, content full */
+body.sidebar-collapsed .sidebar{
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+body.sidebar-collapsed .content{
+  margin-left: 0;
+  width: 100%;
+}
+
+/* Vùng hover mép trái vẫn đúng theo header */
+.left-hover-zone{
+  position: fixed;
+  left: 0;
+  top: var(--header-h);
+  width: 10px;
+  height: calc(100vh - var(--header-h));
+  z-index: 40;
+}
+
+/* Nửa nút mở rộng khi collapsed */
+.menu-expand-handle{
+  position: fixed;
+  left: 0;
+  top: calc(var(--header-h) + 12px);
+  width: 18px;
+  height: 44px;
+
+  border: none;
+  background: #116fac;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+
+  cursor: pointer;
+  z-index: 45;
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 10px 20px rgba(2,6,23,0.18);
+}
+
+.menu-expand-handle i{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  transform: translateX(-2px);
+}
+
+body.sidebar-collapsed .menu-expand-handle{
+  display: flex;
+}

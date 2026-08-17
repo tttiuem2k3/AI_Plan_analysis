@@ -1,0 +1,33 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python virtual environments
+AI_GENEPA/
+.venv/
+venv/
+env/
+
+# Python caches / test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Trained AI/ML model artifacts
+backend/models_AI_forecast/
+*.pkl
+*.pickle
+*.joblib
+*.cbm
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.ckpt
+
+# Runtime logs
+*.log
+backend/logs/

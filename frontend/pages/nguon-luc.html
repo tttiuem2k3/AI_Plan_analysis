@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Định mức nguồn lực</title>
+  <link rel="stylesheet" href="../assets/css/nguon-luc.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+  <div class="page">
+    <div class="page-head">
+      <div class="page-title">
+        <div class="h1">Định mức nguồn lực</div>
+      </div>
+      <div class="head-actions">
+        <div class="search">
+          <i class="bi bi-search"></i>
+          <input id="txtSearch" placeholder="Tìm kiếm bộ phận, công đoạn, nguồn lực..." />
+        </div>
+        <div class="dropdown">
+          <button class="btn primary" id="btnAddDropdown">
+            <i class="bi bi-plus-lg"></i> Thêm mới
+          </button>
+        </div>
+        <button class="btn ghost" id="btnReload" title="Tải lại">
+          <i class="bi bi-arrow-clockwise"></i>
+        </button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width:40px;"></th>
+              <th style="width:50px;">STT</th>
+              <th style="width:130px;">Loại</th>
+              <th style="width:160px;">Mã</th>
+              <th>Tên</th>
+              <th style="width:160px;">Nhân sự</th>
+              <th style="width:180px;">Nhân sự phụ thuộc</th>
+              <th style="width:180px;">Thời gian thiết lập</th>
+              <th style="width:160px;">Thao tác</th>
+            </tr>
+          </thead>
+          <tbody id="tbBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Modal thêm/sửa -->
+    <div class="modal-backdrop hidden" id="modalNguonLuc">
+      <div class="modal">
+        <div class="modal-head">
+          <div class="modal-title" id="modalNguonLucTitle">Thêm mới nguồn lực</div>
+          <button class="icon-btn" data-close="modalNguonLuc"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="grid">
+            <label>
+              <span>Loại</span>
+              <select id="fLoaiNguonLuc">
+                <option value="congdoanlon">Công đoạn lớn</option>
+                <option value="congdoan">Công đoạn</option>
+                <option value="nguonluc">Nguồn lực</option>
+              </select>
+            </label>
+            <label>
+              <span>Mã</span>
+              <input id="fMaNguonLuc" />
+            </label>
+            <label class="col-2">
+              <span>Tên</span>
+              <input id="fTenNguonLuc" />
+            </label>
+            <label id="lblNhanSuNguonLuc">
+              <span>Nhân sự</span>
+              <input id="fNhanSuNguonLuc" type="number" />
+            </label>
+            <label id="lblNhanSuPhuThuocNguonLuc" class="hidden">
+              <span>Nhân sự phụ thuộc</span>
+              <input id="fNhanSuPhuThuocNguonLuc" type="number" />
+            </label>
+            <label id="lblThoiGianThietLapNguonLuc" class="hidden">
+              <span>Thời gian thiết lập</span>
+              <input id="fThoiGianThietLapNguonLuc" type="number" step="0.01" />
+            </label>
+          </div>
+        </div>
+        <div class="modal-foot">
+          <button class="btn ghost" data-close="modalNguonLuc">Hủy</button>
+          <button class="btn primary" id="btnSaveNguonLuc">Lưu</button>
+        </div>
+      </div>
+    </div>
+    <!-- Modal thư viện công đoạn/nguồn lực (kế thừa) -->
+    <div class="modal-backdrop hidden" id="modalLib">
+      <div class="modal modal-xl">
+        <div class="modal-head">
+          <div class="modal-title" id="modalLibTitle">Thư viện</div>
+          <button class="icon-btn" data-close="modalLib"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="library-head">
+            <div class="search">
+              <i class="bi bi-search"></i>
+              <input id="txtSearchLib" placeholder="Tìm kiếm..." />
+            </div>
+            <button class="btn ghost" id="btnReloadLib" title="Tải lại">
+              <i class="bi bi-arrow-clockwise"></i>
+            </button>
+          </div>
+          <div class="table-wrap slim">
+            <table class="table">
+              <thead id="libTableHead"></thead>
+              <tbody id="libTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal thư viện Công đoạn -->
+    <div class="modal-backdrop hidden" id="modalCongDoanLib">
+      <div class="modal modal-xl">
+        <div class="modal-head">
+          <div class="modal-title">Danh mục công đoạn</div>
+          <button class="icon-btn" data-close="modalCongDoanLib"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="library-head">
+            <div class="search">
+              <i class="bi bi-search"></i>
+              <input id="txtSearchCongDoanLib" placeholder="Tìm công đoạn theo mã / tên..." />
+            </div>
+            <button class="btn primary" id="btnAddCongDoanInLib">
+              <i class="bi bi-plus-lg"></i>
+              Thêm mới
+            </button>
+            <button class="btn ghost" id="btnReloadCongDoanLib" title="Tải lại">
+              <i class="bi bi-arrow-clockwise"></i>
+            </button>
+          </div>
+          <div class="table-wrap slim">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th style="width:160px;">Mã công đoạn</th>
+                  <th>Tên công đoạn</th>
+                  <th style="width:120px;">Nhân sự</th>
+                  <th style="width:160px;">Thao tác</th>
+                </tr>
+              </thead>
+              <tbody id="tbCongDoanLib"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal thư viện Nguồn lực -->
+    <div class="modal-backdrop hidden" id="modalNguonLucLib">
+      <div class="modal modal-xl">
+        <div class="modal-head">
+          <div class="modal-title">Danh mục nguồn lực</div>
+          <button class="icon-btn" data-close="modalNguonLucLib"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="library-head">
+            <div class="search">
+              <i class="bi bi-search"></i>
+              <input id="txtSearchNguonLucLib" placeholder="Tìm nguồn lực theo mã / tên..." />
+            </div>
+            <button class="btn primary" id="btnAddNguonLucInLib">
+              <i class="bi bi-plus-lg"></i>
+              Thêm mới
+            </button>
+            <button class="btn ghost" id="btnReloadNguonLucLib" title="Tải lại">
+              <i class="bi bi-arrow-clockwise"></i>
+            </button>
+          </div>
+          <div class="table-wrap slim">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th style="width:160px;">Mã nguồn lực</th>
+                  <th>Tên nguồn lực</th>
+                  <th style="width:180px;">Nhân sự phụ thuộc</th>
+                  <th style="width:180px;">Thời gian thiết lập</th>
+                  <th style="width:160px;">Thao tác</th>
+                </tr>
+              </thead>
+              <tbody id="tbNguonLucLib"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal cập nhật Bộ phận (Công đoạn lớn) -->
+    <div class="modal-backdrop hidden" id="modalEditBoPhan">
+      <div class="modal">
+        <div class="modal-head">
+          <div class="modal-title">Cập nhật bộ phận</div>
+          <button class="icon-btn" data-close="modalEditBoPhan"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="grid">
+            <label>
+              <span>Loại</span>
+              <select id="eLoaiBoPhan" disabled>
+                <option value="congdoanlon">Bộ phận</option>
+              </select>
+            </label>
+            <label>
+              <span>Mã</span>
+              <input id="eMaBoPhan" disabled />
+            </label>
+            <label class="col-2">
+              <span>Tên</span>
+              <input id="eTenBoPhan" />
+            </label>
+            <label>
+              <span>Nhân sự</span>
+              <input id="eNhanSuBoPhan" type="number" />
+            </label>
+          </div>
+        </div>
+        <div class="modal-foot">
+          <button class="btn ghost" data-close="modalEditBoPhan">Hủy</button>
+          <button class="btn primary" id="btnSaveEditBoPhan">Lưu</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal cập nhật Công đoạn -->
+    <div class="modal-backdrop hidden" id="modalEditCongDoan">
+      <div class="modal">
+        <div class="modal-head">
+          <div class="modal-title">Cập nhật công đoạn</div>
+          <button class="icon-btn" data-close="modalEditCongDoan"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="grid">
+            <label>
+              <span>Loại</span>
+              <select id="eLoaiCongDoan" disabled>
+                <option value="congdoan">Công đoạn</option>
+              </select>
+            </label>
+            <label>
+              <span>Mã</span>
+              <input id="eMaCongDoan" disabled />
+            </label>
+            <label class="col-2">
+              <span>Tên</span>
+              <input id="eTenCongDoan" />
+            </label>
+            <label>
+              <span>Nhân sự</span>
+              <input id="eNhanSuCongDoan" type="number" />
+            </label>
+          </div>
+        </div>
+        <div class="modal-foot">
+          <button class="btn ghost" data-close="modalEditCongDoan">Hủy</button>
+          <button class="btn primary" id="btnSaveEditCongDoan">Lưu</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal cập nhật Nguồn lực -->
+    <div class="modal-backdrop hidden" id="modalEditNguonLuc">
+      <div class="modal">
+        <div class="modal-head">
+          <div class="modal-title">Cập nhật nguồn lực</div>
+          <button class="icon-btn" data-close="modalEditNguonLuc"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="grid">
+            <label>
+              <span>Loại</span>
+              <select id="eLoaiNguonLuc" disabled>
+                <option value="nguonluc">Nguồn lực</option>
+              </select>
+            </label>
+            <label>
+              <span>Mã</span>
+              <input id="eMaNguonLuc" disabled />
+            </label>
+            <label class="col-2">
+              <span>Tên</span>
+              <input id="eTenNguonLuc" />
+            </label>
+            <label>
+              <span>Nhân sự phụ thuộc</span>
+              <input id="eNhanSuPhuThuoc" type="number" />
+            </label>
+            <label>
+              <span>Thời gian thiết lập</span>
+              <input id="eThoiGianThietLap" type="number" step="0.01" />
+            </label>
+          </div>
+        </div>
+        <div class="modal-foot">
+          <button class="btn ghost" data-close="modalEditNguonLuc">Hủy</button>
+          <button class="btn primary" id="btnSaveEditNguonLuc">Lưu</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confirm dialog -->
+    <div class="modal-backdrop hidden" id="modalConfirm">
+      <div class="confirm">
+        <div class="confirm-title" id="confirmTitle">Xác nhận</div>
+        <div class="confirm-msg" id="confirmMsg">Bạn có chắc chắn?</div>
+        <div class="confirm-actions">
+          <button class="btn ghost" id="confirmCancel">Hủy</button>
+          <button class="btn danger" id="confirmOk">Thực hiện</button>
+        </div>
+      </div>
+    </div>
+    <!-- Toast -->
+    <div class="toast-wrap" id="toastWrap"></div>
+  </div>
+  <script src="../assets/js/nguon-luc.js"></script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cảnh báo trễ kế hoạch sản xuất</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Reuse AI page styles (headerless layout via app-full) -->
+  <link rel="stylesheet" href="../assets/css/ke-hoach-ai.css" />
+
+  <style>
+    body{padding:0}
+    .app{max-width:none;margin:0;padding:14px}
+
+    .warn-banner{
+      border:1px solid rgba(220,38,38,.22);
+      background: rgba(220,38,38,.06);
+      border-radius: 14px;
+      padding: 10px 12px;
+      margin-bottom: 12px;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      justify-content:space-between;
+    }
+    .warn-title{font-weight:900;color:#7f1d1d;font-size:13px}
+    .warn-desc{color:#7f1d1d;opacity:.9;font-size:12px;margin-top:2px}
+    .pill-warn2{display:inline-flex;align-items:center;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:800;border:1px solid rgba(245,158,11,.38);background:rgba(245,158,11,.10);color:#a16207;white-space:nowrap}
+
+    /* Slightly taller charts on this page */
+    .chart-wrapper{height: 190px;}
+
+    /* Hide any legacy header if present (safety) */
+    .header{display:none !important}
+  </style>
+</head>
+<body>
+  <div class="app app-full">
+
+    <div class="warn-banner">
+      <div>
+        <div class="warn-title">Cảnh báo: Đơn hàng / Kế hoạch sản xuất đang bị trễ (đang trong quá trình sản xuất)</div>
+        <div class="warn-desc" id="warnDesc">Đang tải dữ liệu…</div>
+      </div>
+      <span class="pill-warn2" id="warnPill">Đang sản xuất • Trễ</span>
+    </div>
+
+    <div class="card card-section">
+      <div class="card-header">
+        <div>
+          <div class="card-section-title">1. Kết quả phân tích dự báo</div>
+          <div class="card-subtitle" id="aiSubtitle">—</div>
+          <div class="hint" id="errorHint" style="display:none"></div>
+        </div>
+      </div>
+
+      <div class="chart-grid">
+        <div class="chart-card">
+          <div class="chart-card-title">Dự báo số lượng sản phẩm sản xuất thực tế</div>
+          <div class="chart-wrapper"><canvas id="chart1"></canvas></div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-title">Dự báo năng suất hoạt động của nhân sự (%)</div>
+          <div class="chart-wrapper"><canvas id="chart2"></canvas></div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-title">Dự báo năng suất hoạt động của máy móc (%)</div>
+          <div class="chart-wrapper"><canvas id="chart3"></canvas></div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-title">Dự báo % nguồn lực khả dụng</div>
+          <div class="chart-wrapper"><canvas id="chart6"></canvas></div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-title">Dự báo số lượng phế phẩm</div>
+          <div class="chart-wrapper"><canvas id="chart4"></canvas></div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-title">Dự báo tồn kho thành phẩm</div>
+          <div class="chart-wrapper"><canvas id="chart5"></canvas></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-section">
+      <div class="card-header">
+        <div>
+          <div class="card-section-title">2. Tối ưu kế hoạch sản xuất</div>
+          <div class="card-subtitle">AI gợi ý các phương án để xử lý trễ: ưu tiên công đoạn nghẽn, dàn ngày theo năng lực và gom theo nguồn lực để giảm setup.</div>
+        </div>
+      </div>
+
+      <div class="suggest-grid">
+        <div class="suggest-list" id="suggestList"></div>
+
+        <div class="plan-table-wrap">
+          <div class="plan-table-header">
+            <div>
+              <div style="font-weight:800">Bảng kế hoạch AI (mô phỏng)</div>
+              <div class="card-subtitle" id="planTblSubtitle">—</div>
+            </div>
+            <span class="plan-badge" id="planBadge">PA1</span>
+          </div>
+          <div class="plan-scroll">
+            <table class="plan-table">
+              <thead>
+                <tr>
+                  <th>Ngày</th>
+                  <th>Sản phẩm</th>
+                  <th>Công đoạn</th>
+                  <th>Số lượng</th>
+                  <th>Nguồn lực</th>
+                </tr>
+              </thead>
+              <tbody id="planBody"></tbody>
+            </table>
+          </div>
+          <div style="padding:10px 12px" id="planCheckBadges"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <button class="btn-secondary" type="button" id="btnClose">Đóng</button>
+      <button class="btn-primary" type="button" id="btnConfirm">Xác nhận</button>
+    </div>
+  </div>
+
+  <script>
+    // Inject ke_hoach_id -> id so ke-hoach-ai.js can work without modifications.
+    (function(){
+      const qs = new URLSearchParams(window.location.search);
+      const khid = qs.get('ke_hoach_id');
+      if (khid && !qs.get('id')) {
+        qs.set('id', khid);
+        const newUrl = `${location.pathname}?${qs.toString()}`;
+        history.replaceState(null, '', newUrl);
+      }
+    })();
+
+    function goBack(){ window.location.href = './canh-bao.html'; }
+    document.getElementById('btnClose')?.addEventListener('click', goBack);
+    document.getElementById('btnConfirm')?.addEventListener('click', goBack);
+
+    // Banner: after AI page subtitle is updated, mirror it into warning description.
+    (function(){
+      const warnDesc = document.getElementById('warnDesc');
+      const pill = document.getElementById('warnPill');
+      const sub = document.getElementById('aiSubtitle');
+      let tries = 0;
+      const t = setInterval(() => {
+        tries++;
+        const txt = (sub?.textContent || '').trim();
+        if (txt && txt !== '—') {
+          if (warnDesc) warnDesc.textContent = txt;
+          if (pill) pill.textContent = 'Đang sản xuất • Theo dõi trễ';
+          clearInterval(t);
+        }
+        if (tries > 40) clearInterval(t);
+      }, 250);
+    })();
+  </script>
+
+  <!-- Reuse existing AI analysis JS: suggestions/table use real calendar data -->
+  <script src="../assets/js/ke-hoach-ai.js"></script>
+
+  <script>
+    // Override chart rendering for this alert screen:
+    // - Show historical (actual produced-to-date) vs future (forecast) split at today.
+    // - Use real date axis from /calendar; values are demo but split is real.
+    (function(){
+      if (!window.Chart) return;
+
+      const qs = new URLSearchParams(window.location.search);
+      const planId = Number(qs.get('id') || qs.get('ke_hoach_id') || 0);
+      if (!planId) return;
+
+      const fmtDate = (d) => {
+        if (!d) return '';
+        return String(d).split('T')[0];
+      };
+
+      const destroy = () => {
+        try { (window.__keHoachAiCharts || []).forEach(c => c?.destroy?.()); } catch {}
+        window.__keHoachAiCharts = [];
+
+        try { (window.__lateCharts || []).forEach(c => c?.destroy?.()); } catch {}
+        window.__lateCharts = [];
+      };
+
+      const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+      const sinWave = (i, base, amp, period) => base + amp * Math.sin((2 * Math.PI * i) / Math.max(1, period));
+
+      function createLine(canvasId, labels, datasets, yMin=null, yMax=null){
+        const el = document.getElementById(canvasId);
+        if (!el) return;
+        const c = new Chart(el.getContext('2d'), {
+          type: 'line',
+          data: { labels, datasets },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                display: true,
+                position: 'bottom',
+                labels: { boxWidth: 12, usePointStyle: true, font: { size: 10 } }
+              },
+              tooltip: { mode: 'index', intersect: false }
+            },
+            interaction: { mode: 'index', intersect: false },
+            scales: {
+              x: { ticks: { font: { size: 9 } } },
+              y: {
+                ticks: { font: { size: 9 } },
+                beginAtZero: (yMin !== null),
+                min: (yMin !== null ? yMin : undefined),
+                max: (yMax !== null ? yMax : undefined)
+              }
+            }
+          }
+        });
+        window.__lateCharts = window.__lateCharts || [];
+        window.__lateCharts.push(c);
+      }
+
+      function splitHistForecast(labels, full, splitIndex){
+        const n = labels.length;
+        const hist = new Array(n).fill(null);
+        const fc = new Array(n).fill(null);
+        for (let i = 0; i < n; i++) {
+          if (i < splitIndex) hist[i] = full[i] ?? null;
+          if (i >= splitIndex) fc[i] = full[i] ?? null;
+        }
+        return { hist, fc };
+      }
+
+      function renderLateChartsFromCalendar(cal){
+        try {
+          const days = Array.isArray(cal?.Days) ? cal.Days : [];
+          const labels = days.map(d => fmtDate(d));
+          const axis = labels.length ? labels : ['T2','T3','T4','T5','T6','T7','CN'];
+
+          const todayStr = fmtDate(new Date());
+          let splitIndex = axis.length;
+          for (let i = 0; i < axis.length; i++) {
+            if (axis[i] >= todayStr) { splitIndex = i; break; }
+          }
+          if (axis.length >= 2) splitIndex = Math.min(axis.length - 1, Math.max(1, splitIndex));
+
+          const len = axis.length;
+
+          const prodFull = Array.from({ length: len }, (_, i) => Math.round(clamp(sinWave(i, 3200, 900, 10) + (i % 5 === 0 ? 350 : 0), 0, 5000)));
+          const humanFull = Array.from({ length: len }, (_, i) => Math.round(clamp(sinWave(i, 72, 18, 9), 0, 100)));
+          const machineFull = Array.from({ length: len }, (_, i) => Math.round(clamp(sinWave(i, 68, 22, 11), 0, 100)));
+          const availFull = Array.from({ length: len }, (_, i) => Math.round(clamp(95 - (i % 6) * 7 - (i % 13 === 0 ? 10 : 0), 0, 100)));
+          const scrapFull = Array.from({ length: len }, (_, i) => Math.round(clamp((i % 7 === 3 ? 6 : 0) + (i % 5 === 2 ? 3 : 1), 0, 20)));
+
+          const invCats = ['NVL A','NVL B','NVL C','BTP X','BTP Y','BTP Z'];
+          const invFull = invCats.map((_, i) => Math.round(clamp(8200 - i * 950 + (i % 2 ? 300 : 0), 0, 10000)));
+
+          const s1 = splitHistForecast(axis, prodFull, splitIndex);
+          const s2 = splitHistForecast(axis, humanFull, splitIndex);
+          const s3 = splitHistForecast(axis, machineFull, splitIndex);
+          const s6 = splitHistForecast(axis, availFull, splitIndex);
+          const s4 = splitHistForecast(axis, scrapFull, splitIndex);
+
+          destroy();
+
+          createLine('chart1', axis, [
+            { label: 'Lịch sử (đã sản xuất)', data: s1.hist, borderColor: '#006eb4', backgroundColor: '#006eb4', borderWidth: 2, tension: 0.25, pointRadius: 2 },
+            { label: 'Dự báo (tương lai)', data: s1.fc, borderColor: '#f97316', backgroundColor: '#f97316', borderWidth: 2, tension: 0.25, pointRadius: 2 },
+          ], 0, 5000);
+
+          createLine('chart2', axis, [
+            { label: 'Lịch sử', data: s2.hist, borderColor: '#006eb4', backgroundColor: '#006eb4', borderWidth: 2, tension: 0.25, pointRadius: 2 },
+            { label: 'Dự báo', data: s2.fc, borderColor: '#f97316', backgroundColor: '#f97316', borderWidth: 2, tension: 0.25, pointRadius: 2 },
+          ], 0, 100);
+
+          createLine('chart3', axis, [
+            { label: 'Lịch sử', data: s3.hist, borderColor: '#006eb4', backgroundColor: '#006eb4', borderWidth: 2, tension: 0.25, pointRadius: 2 },
+            { label: 'Dự báo', data: s3.fc, borderColor: '#f97316', backgroundColor: '#f97316', borderWidth: 2, tension: 0.25, pointRadius: 2 },
+          ], 0, 100);
+
+          createLine('chart6', axis, [
+            { label: 'Lịch sử', data: s6.hist, borderColor: '#006eb4', backgroundColor: '#006eb4', borderWidth: 2, tension: 0.25, pointRadius: 2 },
+            { label: 'Dự báo', data: s6.fc, borderColor: '#f97316', backgroundColor: '#f97316', borderWidth: 2, tension: 0.25, pointRadius: 2 },
+          ], 0, 100);
+
+          createLine('chart4', axis, [
+            { label: 'Lịch sử', data: s4.hist, borderColor: '#006eb4', backgroundColor: '#006eb4', borderWidth: 2, tension: 0.25, pointRadius: 2 },
+            { label: 'Dự báo', data: s4.fc, borderColor: '#f97316', backgroundColor: '#f97316', borderWidth: 2, tension: 0.25, pointRadius: 2 },
+          ], 0, 20);
+
+          createLine('chart5', invCats, [
+            { label: 'Tồn kho', data: invFull, borderColor: '#006eb4', backgroundColor: 'rgba(0,110,180,0.18)', fill: true, borderWidth: 2, tension: 0.25, pointRadius: 2 },
+          ], 0, 10000);
+        } catch (e) {
+          console.warn(e);
+        }
+      }
+
+      // Hook fetch: capture the calendar response ONCE, do not trigger another fetch.
+      (function hookFetchOnce(){
+        const _fetch = window.fetch;
+        if (typeof _fetch !== 'function') return;
+        if (window.__lateFetchHooked) return;
+        window.__lateFetchHooked = true;
+
+        window.fetch = async function(input, init){
+          const res = await _fetch(input, init);
+          try {
+            const url = (typeof input === 'string') ? input : input?.url;
+            if (url && String(url).includes(`/api/v1/kehoach/${planId}/calendar`)) {
+              // clone so the original consumer (ke-hoach-ai.js) still can read its body
+              const clone = res.clone();
+              clone.json().then((cal) => {
+                if (!window.__lateCalendarCached) {
+                  window.__lateCalendarCached = true;
+                  setTimeout(() => renderLateChartsFromCalendar(cal), 50);
+                }
+              }).catch(() => { /* ignore */ });
+            }
+          } catch {}
+          return res;
+        };
+      })();
+
+      // Fallback: if calendar already loaded before hook, we don't re-fetch (avoid spam).
+      // In that case charts will remain as ke-hoach-ai.js demo charts.
+
+      window.addEventListener('beforeunload', destroy);
+    })();
+  </script>
+
+</body>
+</html>

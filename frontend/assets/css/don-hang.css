@@ -1,0 +1,135 @@
+:root{
+  --blue:#006eb4;
+  --blue-2:#0b5fa5;
+  --bg:#f6f8fb;
+  --text:#0f172a;
+  --muted:#64748b;
+  --border:#e5e7eb;
+  --danger:#dc2626;
+  --ok:#16a34a;
+  --warn:#f59e0b;
+}
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+.page{padding:15px 22px;max-width:100%;margin:0 auto;}
+.page-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px;}
+.page-title .h1{font-size:22px;font-weight:800;color:var(--blue);}
+
+.head-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.search{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--border);border-radius:10px;padding:10px 12px;min-width:340px;}
+.search i{color:var(--muted);}
+.search input{border:none;outline:none;width:80%;font-size:14px;}
+
+.btn{border:1px solid var(--border);background:#fff;color:var(--text);padding:10px 12px;border-radius:10px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px;}
+.btn.primary{background:var(--blue);color:#fff;border-color:var(--blue);}
+.btn.primary:hover{background:var(--blue-2);}
+.btn.ghost:hover{background:#f2f4f7;}
+.btn.danger{background:var(--danger);border-color:var(--danger);color:#fff;}
+.btn.danger:hover{filter:brightness(0.95);}
+
+.card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;}
+.table-wrap{overflow:auto;}
+.table-wrap.slim{max-height:360px;}
+
+.table{width:100%;border-collapse:separate;border-spacing:0;min-width:1150px;}
+.table thead th{position:sticky;top:0;z-index:1;}
+.th-blue{background:var(--blue);color:#fff;font-weight:800;font-size:13px;padding:12px 10px;text-align:left;}
+.table tbody td{border-bottom:1px solid var(--border);padding:10px 10px;font-size:13px;vertical-align:middle;}
+
+.row-loai td{background:#f8fbff;font-weight:900;color:#0b3a68;}
+.row-dh td{background:#fff;font-weight:700;}
+.row-sp td{background:#fcfcfd;color:#0f172a;}
+
+.cell-muted{color:var(--muted);font-weight:600;}
+
+.icon-btn{border:none;background:transparent;cursor:pointer;padding:6px;border-radius:10px;}
+.icon-btn:hover{background:#f2f4f7;}
+
+.tree-toggle{width:34px;height:34px;border:1px solid var(--border);border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;}
+.tree-toggle:hover{background:#f2f4f7;}
+
+/* Modal */
+.modal-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.45);display:flex;align-items:center;justify-content:center;padding:20px;z-index: 5000; /* ensure overlay is above sticky table headers */}
+.hidden{display:none !important;}
+.modal{background:#fff;border-radius:16px;width:720px;max-width:100%;border:1px solid var(--border);box-shadow:0 14px 40px rgba(2,6,23,.25);position: relative;z-index: 5001;}
+
+/* Modal lớn: mở rộng thêm để modal-body rộng hơn */
+.modal-xl{width:min(1280px, calc(100vw - 40px));}
+
+.modal-head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--border);}
+.modal-title{font-weight:900;color:var(--blue);}
+
+/* modal-body dùng full width */
+.modal-body{padding:16px;width:100%;}
+
+.modal-foot{display:flex;align-items:center;justify-content:flex-end;gap:10px;padding:14px 16px;border-top:1px solid var(--border);}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.grid label{display:flex;flex-direction:column;gap:6px;font-size:12px;color:var(--muted);font-weight:700;}
+.grid input,.grid select{border:1px solid var(--border);border-radius:10px;padding:10px 10px;font-size:14px;outline:none;}
+.grid input:focus,.grid select:focus{border-color:rgba(0,110,180,.55);box-shadow:0 0 0 3px rgba(0,110,180,.12)}
+.col-2{grid-column:span 2;}
+
+.line{height:1px;background:var(--border);margin:14px 0;}
+.section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
+.section-head .h2{font-size:14px;font-weight:900;color:#0b3a68;}
+
+/* Confirm */
+.confirm{background:#fff;border-radius:16px;border:1px solid var(--border);width:420px;max-width:100%;padding:16px;box-shadow:0 14px 40px rgba(2,6,23,.25);position: relative;z-index: 5001;}
+.confirm-title{font-weight:900;margin-bottom:6px;color:var(--blue);}
+.confirm-msg{color:var(--muted);font-weight:700;margin-bottom:14px;font-size:13px;}
+.confirm-actions{display:flex;justify-content:flex-end;gap:10px;}
+
+/* Toast */
+.toast-wrap{
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  top:auto;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  z-index:9999;
+}
+.toast{background:#fff;border:1px solid var(--border);border-left:4px solid var(--blue);border-radius:14px;padding:10px 12px;display:flex;gap:10px;align-items:flex-start;box-shadow:0 12px 36px rgba(2,6,23,.16);min-width:280px;max-width:360px;}
+.toast .t-title{font-weight:900;font-size:13px;margin-bottom:2px;}
+.toast .t-msg{color:var(--muted);font-weight:700;font-size:12px;}
+
+/* Helpers */
+.nowrap{white-space:nowrap;}
+.right{text-align:right;}
+
+/* Modal: Product library */
+#modalProductLib .library-head{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:5px;
+}
+
+#modalProductLib .library-head .search{
+  flex:1 1 auto;
+  min-width:0;
+  height:40px;
+  padding:0 12px;
+}
+
+/* Reset input trong modal để không bị line-height/height làm lệch và vẫn nhập bình thường */
+#modalProductLib .library-head .search input{
+  width:100%;
+  height:100%;
+  line-height:normal;
+}
+
+#modalProductLib #btnReloadProduct{
+  flex:0 0 auto;
+  height:40px;
+  padding:0 12px;
+}

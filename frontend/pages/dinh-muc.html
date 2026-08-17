@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Định mức sản phẩm</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="../assets/css/dinh-muc.css">
+</head>
+
+<body>
+  <div class="page">
+    <!-- Header nội bộ trang -->
+    <div class="page-head">
+      <div class="page-title">
+        <div class="h1">Định mức sản phẩm</div>
+      </div>
+
+      <div class="head-actions">
+        <div class="search">
+          <i class="bi bi-search"></i>
+          <input id="txtSearchTP" placeholder="Tìm TP theo mã / tên..." />
+        </div>
+
+        <button class="btn primary" id="btnAddProduct">
+          <i class="bi bi-plus-lg"></i>
+          Thêm sản phẩm
+        </button>
+
+        <button class="btn ghost" id="btnReload" title="Tải lại">
+          <i class="bi bi-arrow-clockwise"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="card">
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="th-blue" style="width:60px;"></th>
+              <th class="th-blue" style="width:28px;">STT</th>
+              <th class="th-blue" style="width:160px;">Loại</th>
+              <th class="th-blue" >Mã sản phẩm</th>
+              <th class="th-blue">Tên sản phẩm</th>
+              <th class="th-blue" style="width:140px;">Định lượng</th>
+              <th class="th-blue" style="width:180px;">Định mức thời gian</th>
+
+              <!-- NEW -->
+              <th class="th-blue" style="width:160px;">Thứ tự sản xuất</th>
+              <th class="th-blue" style="width:180px;">Công đoạn</th>
+
+              <th class="th-blue" style="width:160px;">Thao tác</th>
+            </tr>
+          </thead>
+          <tbody id="tbBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal: Add/Edit product -->
+  <div class="modal-backdrop hidden" id="modalProduct">
+    <div class="modal">
+      <div class="modal-head">
+        <div class="modal-title" id="modalProductTitle">Thêm sản phẩm</div>
+        <button class="icon-btn" data-close="modalProduct"><i class="bi bi-x-lg"></i></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="grid">
+          <label>
+            <span>Loại sản phẩm</span>
+            <select id="fLoai">
+              <option value="TP">Thành phẩm</option>
+              <option value="BTP">Bán thành phẩm</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Mã sản phẩm</span>
+            <input id="fMa" placeholder="Nhập mã sản phẩm..." />
+          </label>
+
+          <label class="col-2">
+            <span>Tên sản phẩm</span>
+            <input id="fTen" placeholder="Nhập tên sản phẩm..." />
+          </label>
+
+          <label>
+            <span>Định lượng</span>
+            <input id="fDL" type="number" step="0.00001" />
+          </label>
+
+          <label>
+            <span>Định mức thời gian</span>
+            <input id="fTG" type="number" step="0.01" />
+          </label>
+
+          <label class="col-2" id="wrapCongDoan">
+            <span>Công đoạn</span>
+            <select id="fCongDoan">
+              <option value="">-- Chọn công đoạn --</option>
+            </select>
+            
+          </label>
+
+        </div>
+      </div>
+
+      <div class="modal-foot">
+        <button class="btn ghost" data-close="modalProduct">Hủy</button>
+        <button class="btn primary" id="btnSaveProduct">Lưu</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: BTP Library (overlay) -->
+  <div class="modal-backdrop hidden" id="modalBtpLibrary">
+    <div class="modal modal-xl">
+      <div class="modal-head">
+        <div class="modal-title">Thư viện bán thành phẩm</div>
+        <button class="icon-btn" data-close="modalBtpLibrary"><i class="bi bi-x-lg"></i></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="library-head">
+          <div class="search">
+            <i class="bi bi-search"></i>
+            <input id="txtSearchBTP" placeholder="Tìm bán thành phẩm theo mã / tên..." />
+          </div>
+
+          <button class="btn primary" id="btnAddBTPInLib">
+            <i class="bi bi-plus-lg"></i>
+            Thêm bán thành phẩm
+          </button>
+
+          <button class="btn ghost" id="btnReloadBTP" title="Tải lại">
+            <i class="bi bi-arrow-clockwise"></i>
+          </button>
+        </div>
+
+        <div class="table-wrap slim">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="th-blue" style="width:220px;">Mã bán thành phẩm</th>
+                <th class="th-blue" style="width:220px;">Tên bán thành phẩm</th>
+                <th class="th-blue" style="width:160px;">Định lượng</th>
+                <th class="th-blue" style="width:180px;">Định mức thời gian</th>
+                <th class="th-blue" style="width:170px;">Công đoạn</th>
+                <th class="th-blue" style="width:160px;">Thao tác</th>
+              </tr>
+            </thead>
+            <tbody id="tbBtpLib"></tbody>
+          </table>
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirm dialog -->
+  <div class="modal-backdrop hidden" id="modalConfirm">
+    <div class="confirm">
+      <div class="confirm-title" id="confirmTitle">Xác nhận</div>
+      <div class="confirm-msg" id="confirmMsg">Bạn có chắc chắn?</div>
+      <div class="confirm-actions">
+        <button class="btn ghost" id="confirmCancel">Hủy</button>
+        <button class="btn danger" id="confirmOk">Thực hiện</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-wrap" id="toastWrap"></div>
+
+  <script src="../assets/js/dinh-muc.js"></script>
+</body>
+</html>
