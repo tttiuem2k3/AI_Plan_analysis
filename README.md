@@ -2,7 +2,10 @@
 
 > Hệ thống quản lý và phân tích **kế hoạch sản xuất** kết hợp dữ liệu nghiệp vụ, constraint logic và AI để hỗ trợ lập kế hoạch, phát hiện xung đột và đánh giá nguồn lực.
 
-<p align="center">\n  <img src="./docs/images/readme_overview.svg" width="100%" alt="AI Production Planning &amp; Analysis System overview">\n</p>\n
+<p align="center">
+  <img src="./docs/images/readme_overview.svg" width="100%" alt="AI Production Planning &amp; Analysis System overview">
+</p>
+
 ---
 
 ## 📌 Giới thiệu
