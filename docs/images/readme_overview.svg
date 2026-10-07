@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#8bb9e8" flood-opacity="0.22"/>
+  </filter>
+  <linearGradient id="footer" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#eaf5ff"/>
+    <stop offset="55%" stop-color="#eef8ff"/>
+    <stop offset="100%" stop-color="#f1edff"/>
+  </linearGradient>
+  <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,8 L10,4 z" fill="#1781e8"/>
+  </marker>
+</defs>
+<rect width="1600" height="900" fill="#ffffff"/>
+<text x="800" y="74" text-anchor="middle" font-family="Arial,Segoe UI,sans-serif" font-size="54" font-weight="800" fill="#0b2e69">AI Production Planning &amp; Analysis System</text>
+<text x="800" y="120" text-anchor="middle" font-family="Arial,Segoe UI,sans-serif" font-size="26" font-weight="600" fill="#506887">Data-driven production planning, optimization, and AI analysis</text>
+<line x1="310" y1="145" x2="1290" y2="145" stroke="#dcefff" stroke-width="5" stroke-linecap="round"/>
+
+<line x1="324.4" y1="490.0" x2="338.4" y2="490.0" stroke="#1781e8" stroke-width="5" marker-end="url(#arrow)"/>
+<line x1="636.8" y1="490.0" x2="650.8" y2="490.0" stroke="#1781e8" stroke-width="5" marker-end="url(#arrow)"/>
+<line x1="949.2" y1="490.0" x2="963.2" y2="490.0" stroke="#1781e8" stroke-width="5" marker-end="url(#arrow)"/>
+<line x1="1261.6" y1="490.0" x2="1275.6" y2="490.0" stroke="#1781e8" stroke-width="5" marker-end="url(#arrow)"/>
+<g filter="url(#shadow)"><rect x="28.0" y="178" rx="20" ry="20" width="294.4" height="624.0" fill="#ffffff" stroke="#bfe3ff" stroke-width="2"/></g>
+<rect x="28.0" y="178" rx="20" ry="20" width="294.4" height="78" fill="#1478e8"/>
+<rect x="28.0" y="236" width="294.4" height="20" fill="#1478e8"/>
+<circle cx="70.0" cy="217" r="22" fill="#ffffff" fill-opacity="0.18"/>
+<text x="70.0" y="226" text-anchor="middle" font-family="Arial,Segoe UI,sans-serif" font-size="26" font-weight="800" fill="#ffffff">1</text>
+<text x="104.0" y="211" font-family="Arial,Segoe UI,sans-serif" font-size="21" font-weight="800" fill="#ffffff">Input Data</text>
+<rect x="44.0" y="274.0" rx="15" ry="15" width="262.4" height="118.0" fill="#eef7ff" stroke="#d7ebfb" stroke-width="1.3"/>
+<circle cx="70.0" cy="302.0" r="12" fill="#1478e8" fill-opacity="0.16"/>
+<circle cx="70.0" cy="302.0" r="5.5" fill="#1478e8"/>
+<text x="92.0" y="302.0" font-family="Arial,Segoe UI,sans-serif" font-size="17" font-weight="800" fill="#0d2d63">BOM / Định mức</text>
+<text x="64.0" y="330.0" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">Materials, quantities,</text>
+<text x="64.0" y="348.0" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">structure</text>
+<rect x="44.0" y="404.0" rx="15" ry="15" width="262.4" height="118.0" fill="#effbf8" stroke="#d3efe8" stroke-width="1.3"/>
+<circle cx="70.0" cy="432.0" r="12" fill="#1478e8" fill-opacity="0.16"/>
+<circle cx="70.0" cy="432.0" r="5.5" fill="#1478e8"/>
+<text x="92.0" y="432.0" font-family="Arial,Segoe UI,sans-serif" font-size="17" font-weight="800" fill="#0d2d63">Resources / Nguồn lực</text>
+<text x="64.0" y="460.0" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">Machines, manpower, capacity</text>
+<rect x="44.0" y="534.0" rx="15" ry="15" width="262.4" height="118.0" fill="#f5f1ff" stroke="#e2dafa" stroke-width="1.3"/>
+<circle cx="70.0" cy="562.0" r="12" fill="#1478e8" fill-opacity="0.16"/>
+<circle cx="70.0" cy="562.0" r="5.5" fill="#1478e8"/>
+<text x="92.0" y="562.0" font-family="Arial,Segoe UI,sans-serif" font-size="17" font-weight="800" fill="#0d2d63">Processes / Công đoạn</text>
+<text x="64.0" y="590.0" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">Routing and constraints</text>
+<rect x="44.0" y="664.0" rx="15" ry="15" width="262.4" height="118.0" fill="#eef7ff" stroke="#d7ebfb" stroke-width="1.3"/>
+<circle cx="70.0" cy="692.0" r="12" fill="#1478e8" fill-opacity="0.16"/>
+<circle cx="70.0" cy="692.0" r="5.5" fill="#1478e8"/>
+<text x="92.0" y="692.0" font-family="Arial,Segoe UI,sans-serif" font-size="17" font-weight="800" fill="#0d2d63">Orders / Đơn hàng</text>
+<text x="64.0" y="720.0" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">Demand and delivery dates</text>
+<g filter="url(#shadow)"><rect x="340.4" y="178" rx="20" ry="20" width="294.4" height="624.0" fill="#ffffff" stroke="#bfe3ff" stroke-width="2"/></g>
+<rect x="340.4" y="178" rx="20" ry="20" width="294.4" height="78" fill="#0a9e87"/>
+<rect x="340.4" y="236" width="294.4" height="20" fill="#0a9e87"/>
+<circle cx="382.4" cy="217" r="22" fill="#ffffff" fill-opacity="0.18"/>
+<text x="382.4" y="226" text-anchor="middle" font-family="Arial,Segoe UI,sans-serif" font-size="26" font-weight="800" fill="#ffffff">2</text>
+<text x="416.4" y="211" font-family="Arial,Segoe UI,sans-serif" font-size="21" font-weight="800" fill="#ffffff">Production Plan</text>
+<rect x="356.4" y="274.0" rx="15" ry="15" width="262.4" height="161.3" fill="#eef7ff" stroke="#d7ebfb" stroke-width="1.3"/>
+<circle cx="382.4" cy="302.0" r="12" fill="#0a9e87" fill-opacity="0.16"/>
+<circle cx="382.4" cy="302.0" r="5.5" fill="#0a9e87"/>
+<text x="404.4" y="302.0" font-family="Arial,Segoe UI,sans-serif" font-size="17" font-weight="800" fill="#0d2d63">Schedule</text>
+<text x="376.4" y="330.0" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">Create feasible production plan</text>
+<rect x="356.4" y="447.3" rx="15" ry="15" width="262.4" height="161.3" fill="#effbf8" stroke="#d3efe8" stroke-width="1.3"/>
+<circle cx="382.4" cy="475.3" r="12" fill="#0a9e87" fill-opacity="0.16"/>
+<circle cx="382.4" cy="475.3" r="5.5" fill="#0a9e87"/>
+<text x="404.4" y="475.3" font-family="Arial,Segoe UI,sans-serif" font-size="17" font-weight="800" fill="#0d2d63">Allocation</text>
+<text x="376.4" y="503.3" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">Assign resources and materials</text>
+<rect x="356.4" y="620.7" rx="15" ry="15" width="262.4" height="161.3" fill="#f5f1ff" stroke="#e2dafa" stroke-width="1.3"/>
+<circle cx="382.4" cy="648.7" r="12" fill="#0a9e87" fill-opacity="0.16"/>
+<circle cx="382.4" cy="648.7" r="5.5" fill="#0a9e87"/>
+<text x="404.4" y="648.7" font-family="Arial,Segoe UI,sans-serif" font-size="17" font-weight="800" fill="#0d2d63">Capacity</text>
+<text x="376.4" y="676.7" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">Balance work centers</text>
+<g filter="url(#shadow)"><rect x="652.8" y="178" rx="20" ry="20" width="294.4" height="624.0" fill="#ffffff" stroke="#bfe3ff" stroke-width="2"/></g>
+<rect x="652.8" y="178" rx="20" ry="20" width="294.4" height="78" fill="#6b47df"/>
+<rect x="652.8" y="236" width="294.4" height="20" fill="#6b47df"/>
+<circle cx="694.8" cy="217" r="22" fill="#ffffff" fill-opacity="0.18"/>
+<text x="694.8" y="226" text-anchor="middle" font-family="Arial,Segoe UI,sans-serif" font-size="26" font-weight="800" fill="#ffffff">3</text>
+<text x="728.8" y="203" font-family="Arial,Segoe UI,sans-serif" font-size="21" font-weight="800" fill="#ffffff">Production</text>
+<text x="728.8" y="230" font-family="Arial,Segoe UI,sans-serif" font-size="21" font-weight="800" fill="#ffffff">Optimizer</text>
+<rect x="668.8" y="274.0" rx="15" ry="15" width="262.4" height="118.0" fill="#eef7ff" stroke="#d7ebfb" stroke-width="1.3"/>
+<circle cx="694.8" cy="302.0" r="12" fill="#6b47df" fill-opacity="0.16"/>
+<circle cx="694.8" cy="302.0" r="5.5" fill="#6b47df"/>
+<text x="716.8" y="302.0" font-family="Arial,Segoe UI,sans-serif" font-size="17" font-weight="800" fill="#0d2d63">Constraints</text>
+<text x="688.8" y="330.0" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">Capacity, material, business</text>
+<text x="688.8" y="348.0" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">rules</text>
+<rect x="668.8" y="404.0" rx="15" ry="15" width="262.4" height="118.0" fill="#effbf8" stroke="#d3efe8" stroke-width="1.3"/>
+<circle cx="694.8" cy="432.0" r="12" fill="#6b47df" fill-opacity="0.16"/>
+<circle cx="694.8" cy="432.0" r="5.5" fill="#6b47df"/>
+<text x="716.8" y="432.0" font-family="Arial,Segoe UI,sans-serif" font-size="17" font-weight="800" fill="#0d2d63">Conflict Report</text>
+<text x="688.8" y="460.0" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">Detect bottlenecks and</text>
+<text x="688.8" y="478.0" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">violations</text>
+<rect x="668.8" y="534.0" rx="15" ry="15" width="262.4" height="118.0" fill="#f5f1ff" stroke="#e2dafa" stroke-width="1.3"/>
+<circle cx="694.8" cy="562.0" r="12" fill="#6b47df" fill-opacity="0.16"/>
+<circle cx="694.8" cy="562.0" r="5.5" fill="#6b47df"/>
+<text x="716.8" y="562.0" font-family="Arial,Segoe UI,sans-serif" font-size="17" font-weight="800" fill="#0d2d63">KPI / Hotspots</text>
+<text x="688.8" y="590.0" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">Utilization, WIP, lead time</text>
+<rect x="668.8" y="664.0" rx="15" ry="15" width="262.4" height="118.0" fill="#eef7ff" stroke="#d7ebfb" stroke-width="1.3"/>
+<circle cx="694.8" cy="692.0" r="12" fill="#6b47df" fill-opacity="0.16"/>
+<circle cx="694.8" cy="692.0" r="5.5" fill="#6b47df"/>
+<text x="716.8" y="692.0" font-family="Arial,Segoe UI,sans-serif" font-size="17" font-weight="800" fill="#0d2d63">Proposal Options</text>
+<text x="688.8" y="720.0" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">Alternative plan trade-offs</text>
+<g filter="url(#shadow)"><rect x="965.2" y="178" rx="20" ry="20" width="294.4" height="624.0" fill="#ffffff" stroke="#bfe3ff" stroke-width="2"/></g>
+<rect x="965.2" y="178" rx="20" ry="20" width="294.4" height="78" fill="#1478e8"/>
+<rect x="965.2" y="236" width="294.4" height="20" fill="#1478e8"/>
+<circle cx="1007.2" cy="217" r="22" fill="#ffffff" fill-opacity="0.18"/>
+<text x="1007.2" y="226" text-anchor="middle" font-family="Arial,Segoe UI,sans-serif" font-size="26" font-weight="800" fill="#ffffff">4</text>
+<text x="1041.2" y="211" font-family="Arial,Segoe UI,sans-serif" font-size="21" font-weight="800" fill="#ffffff">AI Analysis</text>
+<rect x="981.2" y="274.0" rx="15" ry="15" width="262.4" height="161.3" fill="#eef7ff" stroke="#d7ebfb" stroke-width="1.3"/>
+<circle cx="1007.2" cy="302.0" r="12" fill="#1478e8" fill-opacity="0.16"/>
+<circle cx="1007.2" cy="302.0" r="5.5" fill="#1478e8"/>
+<text x="1029.2" y="302.0" font-family="Arial,Segoe UI,sans-serif" font-size="17" font-weight="800" fill="#0d2d63">Pattern Analysis</text>
+<text x="1001.2" y="330.0" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">Find trends and recurring risks</text>
+<rect x="981.2" y="447.3" rx="15" ry="15" width="262.4" height="161.3" fill="#effbf8" stroke="#d3efe8" stroke-width="1.3"/>
+<circle cx="1007.2" cy="475.3" r="12" fill="#1478e8" fill-opacity="0.16"/>
+<circle cx="1007.2" cy="475.3" r="5.5" fill="#1478e8"/>
+<text x="1029.2" y="475.3" font-family="Arial,Segoe UI,sans-serif" font-size="17" font-weight="800" fill="#0d2d63">What-if Analysis</text>
+<text x="1001.2" y="503.3" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">Evaluate scenarios</text>
+<rect x="981.2" y="620.7" rx="15" ry="15" width="262.4" height="161.3" fill="#f5f1ff" stroke="#e2dafa" stroke-width="1.3"/>
+<circle cx="1007.2" cy="648.7" r="12" fill="#1478e8" fill-opacity="0.16"/>
+<circle cx="1007.2" cy="648.7" r="5.5" fill="#1478e8"/>
+<text x="1029.2" y="648.7" font-family="Arial,Segoe UI,sans-serif" font-size="17" font-weight="800" fill="#0d2d63">Predictive Insights</text>
+<text x="1001.2" y="676.7" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">Forecast delays and resource</text>
+<text x="1001.2" y="694.7" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">needs</text>
+<g filter="url(#shadow)"><rect x="1277.6" y="178" rx="20" ry="20" width="294.4" height="624.0" fill="#ffffff" stroke="#bfe3ff" stroke-width="2"/></g>
+<rect x="1277.6" y="178" rx="20" ry="20" width="294.4" height="78" fill="#0a9e87"/>
+<rect x="1277.6" y="236" width="294.4" height="20" fill="#0a9e87"/>
+<circle cx="1319.6" cy="217" r="22" fill="#ffffff" fill-opacity="0.18"/>
+<text x="1319.6" y="226" text-anchor="middle" font-family="Arial,Segoe UI,sans-serif" font-size="26" font-weight="800" fill="#ffffff">5</text>
+<text x="1353.6" y="211" font-family="Arial,Segoe UI,sans-serif" font-size="21" font-weight="800" fill="#ffffff">Outputs</text>
+<rect x="1293.6" y="274.0" rx="15" ry="15" width="262.4" height="161.3" fill="#eef7ff" stroke="#d7ebfb" stroke-width="1.3"/>
+<circle cx="1319.6" cy="302.0" r="12" fill="#0a9e87" fill-opacity="0.16"/>
+<circle cx="1319.6" cy="302.0" r="5.5" fill="#0a9e87"/>
+<text x="1341.6" y="302.0" font-family="Arial,Segoe UI,sans-serif" font-size="17" font-weight="800" fill="#0d2d63">Recommendations</text>
+<text x="1313.6" y="330.0" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">AI planning recommendations</text>
+<rect x="1293.6" y="447.3" rx="15" ry="15" width="262.4" height="161.3" fill="#effbf8" stroke="#d3efe8" stroke-width="1.3"/>
+<circle cx="1319.6" cy="475.3" r="12" fill="#0a9e87" fill-opacity="0.16"/>
+<circle cx="1319.6" cy="475.3" r="5.5" fill="#0a9e87"/>
+<text x="1341.6" y="475.3" font-family="Arial,Segoe UI,sans-serif" font-size="17" font-weight="800" fill="#0d2d63">Delay Alerts</text>
+<text x="1313.6" y="503.3" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">Early warning for risks</text>
+<rect x="1293.6" y="620.7" rx="15" ry="15" width="262.4" height="161.3" fill="#f5f1ff" stroke="#e2dafa" stroke-width="1.3"/>
+<circle cx="1319.6" cy="648.7" r="12" fill="#0a9e87" fill-opacity="0.16"/>
+<circle cx="1319.6" cy="648.7" r="5.5" fill="#0a9e87"/>
+<text x="1341.6" y="648.7" font-family="Arial,Segoe UI,sans-serif" font-size="17" font-weight="800" fill="#0d2d63">Dashboard Insights</text>
+<text x="1313.6" y="676.7" font-family="Arial,Segoe UI,sans-serif" font-size="14.5" font-weight="500" fill="#536b8d">KPIs, charts and reports</text>
+<rect x="28" y="835" rx="20" ry="20" width="1544" height="48" fill="url(#footer)" stroke="#c9e8ff" stroke-width="1.5"/>
+<text x="800" y="867" text-anchor="middle" font-family="Arial,Segoe UI,sans-serif" font-size="20" font-weight="700" fill="#204b82">FastAPI  •  SQLAlchemy  •  AutoGluon  •  HTML/CSS/JavaScript  •  Windows Server / IIS</text>
+</svg>
